@@ -1,4 +1,6 @@
-
+*{
+  color: black;
+}
 .petrona-font {
     font-family: "Petrona", serif;
     font-optical-sizing: auto;
@@ -10,3 +12,9 @@ body{
     font-family: "Petrona", Open Sans, sans-serif;
     
 }
+
+
+/* .item__title>.item__description{
+  display: none;   
+} */
+
