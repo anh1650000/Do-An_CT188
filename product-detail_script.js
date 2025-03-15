@@ -5,12 +5,12 @@ const products = [
         "time": 3,
         "price": 3990000,
         images: [
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            "/Img/Can_Tho/ben_tre.png",
+            "/Img/Can_Tho/benninhkeu.jpg",
+            "/Img/Can_Tho/cho_noi.jpg",
+            "/Img/Can_Tho/ham_luong.jpg",
+            "/Img/Can_Tho/nha_gom.png",
+            "/Img/Can_Tho/coco_home.webp"
         ],
         moreInformation: {
             "tourist attractions": "Bến Tre - Vĩnh Long - Cần Thơ",
@@ -176,12 +176,13 @@ const products = [
         "time": 3,
         "price": 2690000,
         images: [
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            "/Img/Da_Lat/cau_kinh.jpg",
+            "/Img/Da_Lat/dapahill.jpg",
+            "/Img/Da_Lat/domain_de_marie.jpg",
+            "/Img/Da_Lat/ho-da-thien.jpg",
+            "/Img/Da_Lat/thac_bobla.png",
+            "/Img/Da_Lat/thung_lung_tinh_yeu.jpg",
+            "/Img/Da_Lat/thung_lung_tinh_yeu2.jpg"
         ],
         moreInformation: {
             "tourist attractions": "Đà Lạt, Thác Bobla, Ga Xe Lửa, Thung Lũng Tình Yêu, Cầu Kính 7D",
@@ -248,12 +249,13 @@ const products = [
         "time": 7,
         "price": 10890000,
         images: [
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            "/Img/Ha_Giang/sapa.jpg",
+            "/Img/Ha_Giang/ban-cat-cat-3-1535.jpg",
+            "/Img/Ha_Giang/fansipan.jpg",
+            "/Img/Ha_Giang/nui-doi-quan-ba-2.webp",
+            "/Img/Ha_Giang/Pa-Vi-6ssss.jpg",
+            "/Img/Ha_Giang/tfd__0_13079_ha-giang-province.webp",
+            "/Img/Ha_Giang/tfd__1_13079_song-nho-que.webp"
         ],
         moreInformation: {
             "tourist attractions": "Hà Giang, Lũng Cú, Đồng Văn, Sapa, Fansipan",
@@ -351,12 +353,12 @@ const products = [
         "time": 4,
         "price": 39990000,
         images: [
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            "/Img/Ha_Long/2_IOUD.jpg",
+            "/Img/Ha_Long/cat+ba.jpg",
+            "/Img/Ha_Long/cat-ba.webp",
+            "/Img/Ha_Long/Halong-Bay-1119x700.jpg",
+            "/Img/Ha_Long/index_1.jpg",
+            "/Img/Ha_Long/z26406592_637629146923825393_HasThumb.jpg"
         ],
         moreInformation: {
             "tourist attractions": "Quảng Ninh, vịnh Lan Hạ, Cát Bà",
@@ -433,7 +435,7 @@ const products = [
         "time": 4,
         "price": 8990000,
         images: [
-            "",
+            "/Img/Hoi_An/",
             "",
             "",
             "",
@@ -986,12 +988,35 @@ const params = new URLSearchParams(window.location.search);
 const productId_str = params.get('product-id');
 var productId = parseInt(productId_str, 10);
 productId = productId - 1;
+
 if(products[productId] != null){
-    // giá
-    document.getElementById("product-price").textContent = products[productId].price + " ₫/Khách";
+
     // slide show hình ảnh
+    const imageContainer = document.getElementById("image-container");
     for(let i = 0; i < products[productId].images.length; i++)
-       document.getElementById("image-container").innerHTML += "<div class='slideshow-product--img'><div class='number-text'>" + (i + 1) + " / " + products[productId].images.length + "</div><img id='product-image-"+(i+1)+"' class='product-image' src='" + products[productId].images[i] + "' style='width:100%;'></div>";
+        imageContainer.innerHTML += "<div class='slideshow-product--img'><div class='number-img'>" + (i + 1) + " / " + products[productId].images.length + "</div><img id='product-image-"+(i+1)+"' class='product-image' src='" + products[productId].images[i] + "'style='width:100%';></div>";
+
+    imageContainer.innerHTML += 
+        `<a class="previous-button onclick="changeSlideshow(${-1})>pre</a>
+        <a class="next-button onclick="changeSlideshow(${1})>next</a>`
+    
+    // minimap hình ảnh
+    imageContainer.innerHTML += "<div class='img-minimap__row' id='img-minimap__row'></div>"
+    for(let i = 0; i < products[productId].images.length; i++)
+        document.getElementById("img-minimap__row").innerHTML +=
+        `<div class="img-minimap__column">
+            <img class="src-img-minimap" src="${products[productId].images[i]}" alt="hinh loi" onclick="changeCurrentSlideshow(${i+1})" style="width:100%">
+        </div>` 
+    // ->minimap
+    // if(products[productId].images.length <= 10)
+    //     document.querySelectorAll(".img-minimap__column").forEach(column =>{
+    //         column.style.width = `${800 / products[productId].images.length}px`;
+    //     })
+    // else
+    //     document.querySelectorAll(".img-minimap__column").forEach(column =>{
+    //         column.style.width = "10%";
+    //     })
+
 
     // tên sản phẩm
     document.getElementById("product-title").textContent = products[productId].name;
@@ -1013,8 +1038,48 @@ if(products[productId] != null){
         </li>";
         document.getElementById("item__description-"+ (productId+1) +"-"+(i+1)).innerHTML = products[productId].schedule[i].description;
     }
+
 }else{
     document.getElementById('main').innerHTML = "<h1>Không tìm thấy sản phẩm</h1>";
+}
+
+
+let slideImgIndex = 1;
+slideShowImg(slideImgIndex);
+
+function changeSlideshow(n){
+    slideShowImg(slideImgIndex + n); 
+}
+
+function changeCurrentSlideshow(n){
+    slideShowImg(n);
+}
+
+
+function slideShowImg(n){
+    
+    console.log(slideImgIndex)
+    slideImgIndex = n;
+    let index;
+    let slideshowImgs = document.getElementsByClassName("slideshow-product--img");
+    let minimapImgs = document.getElementsByClassName("src-img-minimap");
+    if(n > slideshowImgs.length)
+        slideImgIndex = 1;
+    if(n < 1)
+        slideImgIndex = slideshowImgs.length;
+    for(index = 0; index < slideshowImgs.length; index++)
+        slideshowImgs[index].style.display = "none";
+
+    for (let i = 0; i < minimapImgs.length; i++) {
+        // minimapImgs[i].classList.remove("img-clicked");
+        minimapImgs[i].classList.add("src-img-minimap");
+        minimapImgs[i].style.opacity = "0.6";
+    }
+
+    // Hiển thị slide hiện tại và thêm hiệu ứng cho minimap tương ứng
+    slideshowImgs[slideImgIndex - 1].style.display = "block";
+    // minimapImgs[slideImgIndex - 1].classList.remove("src-img-minimap");
+    minimapImgs[slideImgIndex - 1].style.opacity = "1";
 }
 
 // show and hide more information description
@@ -1025,4 +1090,71 @@ function showDescription(id, day){
     }else{
         x.style.display = "none";
     }
+}
+
+function changeQuantity(typeOfPerson, quantityChange){
+    // let allQuantity = parseInt(document.getElementById("adults").textContent) + parseInt(document.getElementById("childrens").textContent) + parseInt(document.getElementById("infants").textContent)
+    let currentElement = document.getElementById(typeOfPerson)
+    let currentQuantity = parseInt(currentElement.textContent)
+    if(quantityChange < 0 && currentQuantity > 0){
+        currentElement.textContent = currentQuantity + quantityChange
+        calculateEachPrice(typeOfPerson);
+        calculateTotalPrice();
+    }else if(quantityChange > 0){
+        currentElement.textContent = currentQuantity + quantityChange
+        calculateEachPrice(typeOfPerson);
+        calculateTotalPrice();
+    }else{
+        currentElement = document.getElementById("price-of-"+typeOfPerson)
+        currentElement.style.color = "red"
+        currentElement.style.fontSize = "0.8rem"
+        currentElement.textContent = "Số lượng không hợp lệ!!"
+        setTimeout(function(){
+            currentElement.style.color = "unset"
+            currentElement.style.fontSize = "unset"
+            currentElement.textContent = ""
+        },1000)
+    }
+}
+
+function calculateTotalPrice(){
+    document.getElementById("total-price").textContent = "Đang tính..."
+    setTimeout(()=>{
+        priceDefault = products[productId].price
+        let adultQuantity = parseInt(document.getElementById("adults").textContent)
+        let childQuantity = parseInt(document.getElementById("childrens").textContent)
+        let itfantQuantity = parseInt(document.getElementById("infants").textContent)
+        let totalPrice = adultQuantity * priceDefault + (childQuantity * priceDefault * 0.5) + (itfantQuantity * priceDefault * 0.3)
+        document.getElementById("total-price").textContent = totalPrice.toLocaleString() + "    VND"
+    }, 700)
+        
+}
+
+function calculateEachPrice(typeOfPerson){
+    if(typeOfPerson == ""){
+        return;
+    }
+    let currentElement = document.getElementById("price-of-" + typeOfPerson)
+    currentElement.textContent = "Đang tính..."
+    setTimeout(function(){
+        let priceDefault = products[productId].price
+        let currentQuantity = parseInt(document.getElementById(typeOfPerson).textContent)
+        if (currentQuantity > 0){
+            if(typeOfPerson == "adults"){
+                currentElement.textContent = "*" + (currentQuantity * priceDefault).toLocaleString() + " VND" 
+            }else if(typeOfPerson == "childrens"){
+                currentElement.textContent = "*" + (currentQuantity * priceDefault * 0.5).toLocaleString() + " VND" 
+            }else if(typeOfPerson == "infants"){
+                currentElement.textContent = "*" + (currentQuantity * priceDefault * 0.3).toLocaleString() + " VND" 
+            }
+        }else{
+            currentElement.textContent = ""
+        }
+        
+    }, 700)
+}
+
+onload = function(){
+    calculateEachPrice("adults");
+    calculateTotalPrice();
 }

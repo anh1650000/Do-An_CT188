@@ -15,19 +15,57 @@
 
         </header>
         <main id="main">
-            <article class="article__button-sheet-container">
-                <div class="div__product--price">
-                    <p class="title__price">Giá chỉ từ:</p>
-                    <p class="product__value" id="product-price"></p>
-                </div>
-                <div class="div__user-choice">
-                    <div class="button__cart" onclick="window.location.href='/cart.html'">
-                        Thêm vào giỏ hàng
+            <article class="article__book-tour">
+                <section class="section__title">
+                    <h1 class="book-tour__title">Lịch Trình và Giá Tour</h1>
+                    <p1 class="book-tour__description">Chọn Lịch Trình và Xem Giá:</p1>
+                </section>
+                <section class="section__choose-of-people section__choose-date">
+                        <label class="book-tour__label">Chọn ngày:</label>
+                        <select id="tourDate" class="book-tour__select" onchange="calculateTotalPrice()">
+                            <option>05/06</option>
+                            <option>19/06</option>
+                            <option>04/07</option>
+                        </select>
+                </section>
+                <section class="section__choose-of-people section__choose-people--adults">
+                    <label class="label__choose-people">Người Lớn:</label>
+                    <div class="price-of-each-people" id="price-of-adults"></div>
+                    <div class="choice-people__changeQuantity">
+                        <button class="btn" onclick="changeQuantity('adults', -1)">-</button>
+                        <span class="quantity-results" id="adults">1</span>
+                        <button class="btn" onclick="changeQuantity('adults', 1)">+</button>
                     </div>
-                    <div class="button__advise" onclick="window.location.href='/form.html'">
-                        Tư vấn miễn phí
+                </section>
+                <section class="section__choose-of-people section__choose-people--children">
+                    <label class="label__choose-people">Trẻ Em:</label>
+                    <div class="price-of-each-people" id="price-of-childrens"></div>
+                    <div class="choice-people__changeQuantity">
+                        <button class="btn" onclick="changeQuantity('childrens', -1)">-</button>
+                        <span class="quantity-results" id="childrens">0</span>
+                        <button class="btn" onclick="changeQuantity('childrens', 1)">+</button>
                     </div>
-                </div>
+                </section>
+                <section class="section__choose-of-people section__choose-people--infants">
+                    <label class="label__choose-people">Trẻ Nhỏ:</label>
+                    <div class="price-of-each-people" id="price-of-infants"></div>
+                    <div class="choice-people__changeQuantity">
+                        <button class="btn" onclick="changeQuantity('infants', -1)">-</button>
+                        <span class="quantity-results" id="infants">0</span>
+                        <button class="btn" onclick="changeQuantity('infants', 1)">+</button>
+                    </div>
+                </section>
+                <section class="section__total-price">
+                    <p class="total-price__title">Giá chỉ: </p><span id="total-price"></span>
+                </section>
+                <section class="section__choose-of-people section__favorite-or-book">
+                    <div class="button__favorite" onclick="addToFavorite()">
+                        Thêm vào yêu thích
+                    </div>
+                    <div class="button__advise" onclick="bookTour()">
+                        Đặt lịch ngay
+                    </div>
+                </section>
             </article>
             <article class="article__product-detail">
 
@@ -36,6 +74,26 @@
                 </section>
 
                 <section class="section__image-container slideshow-container" id="image-container">
+                    <!-- js
+                    "<div class='slideshow-product--img'>
+                        <div class='number-img'>" + (i + 1) + " / " + products[productId].images.length + "</div>
+                        <img id='product-image-"+(i+1)+"' class='product-image' src='" + products[productId].images[i] + "'style='width:100%'>
+                    </div>";
+                     -->
+                    <!-- js
+                    <a class="previous-button onclick="changeSlideshow(-1)>pre</a>
+                    <a class="next-button onclick="changeSlideshow(1)>next</a> 
+                    -->
+                    <!-- <div class="titles-img-container">
+                        <p id="captions-img"></p>
+                    </div> -->
+                    <!-- <div class="img-minimap__row" id="img-minimap__row"> -->
+                       <!-- js
+                        <div class="img-minimap__column">
+                            <img class="src-img-minimap" src="" alt="" style="width:100%" onclick="currentSlide(i+1)">
+                       </div>  -->
+                       <!-- ... -->
+                    <!-- </div> -->
                 </section>
 
                 <section class="section__more-information-container">
@@ -71,7 +129,6 @@
                         <p class="more-information__description" id="promotion__description"></p>
                     </div>
                 </section>
-
             </article>
 
             <article class="article__schedule-container">

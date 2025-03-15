@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Tour</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .container { max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; }
+        .row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .btn { cursor: pointer; padding: 5px 10px; border: none; background: #ff9800; color: white; }
+        .total { font-size: 20px; font-weight: bold; color: #d32f2f; }
+        .warning { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Lịch Trình và Giá Tour</h2>
+        <div class="row">
+            <label>Chọn ngày:</label>
+            <select id="tourDate">
+                <option>05/06</option>
+                <option>19/06</option>
+                <option>04/07</option>
+            </select>
+        </div>
+        <div class="row">
+            <label>Người lớn:</label>
+            <button class="btn" onclick="changeCount('adults', -1)">-</button>
+            <span id="adults">1</span>
+            <button class="btn" onclick="changeCount('adults', 1)">+</button>
+        </div>
+        <div class="row">
+            <label>Trẻ em:</label>
+            <button class="btn" onclick="changeCount('children', -1)">-</button>
+            <span id="children">0</span>
+            <button class="btn" onclick="changeCount('children', 1)">+</button>
+        </div>
+        <div class="row">
+            <label>Trẻ nhỏ:</label>
+            <button class="btn" onclick="changeCount('infants', -1)">-</button>
+            <span id="infants">0</span>
+            <button class="btn" onclick="changeCount('infants', 1)">+</button>
+        </div>
+        <div class="row">
+            <label>Phòng đơn:</label>
+            <input type="checkbox" id="singleRoom" onchange="calculateTotal()">
+        </div>
+        <p class="warning" id="warning">⚡ Còn nhận 10 chỗ</p>
+        <p class="total">Tổng Giá Tour: <span id="totalPrice">29.999.000</span> VNĐ</p>
+        <button class="btn" style="width: 100%;">Yêu cầu đặt</button>
+    </div>
+    
+    <script>
+        let basePrice = 23999000;
+        let singleRoomFee = 6000000;
+        let maxSeats = 10;
+        
+        function changeCount(type, amount) {
+            let element = document.getElementById(type);
+            let value = parseInt(element.textContent);
+            if (value + amount >= 0) {
+                element.textContent = value + amount;
+                calculateTotal();
+            }
+        }
+
+        function calculateTotal() {
+            let adults = parseInt(document.getElementById('adults').textContent);
+            let children = parseInt(document.getElementById('children').textContent);
+            let totalPeople = adults + children;
+            let singleRoom = document.getElementById('singleRoom').checked;
+
+            let totalPrice = (adults * basePrice) + (children * basePrice * 0.5);
+            if (singleRoom) totalPrice += singleRoomFee;
+            
+            document.getElementById('totalPrice').textContent = totalPrice.toLocaleString();
+            
+            document.getElementById('warning').style.display = totalPeople > maxSeats ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
