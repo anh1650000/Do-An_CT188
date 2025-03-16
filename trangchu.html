@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="trangchu.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Four<span>Travel</span><img id="fourtravel" src="/image/logo.png"> </div>
+            <ul class="menu">
+                <li><a href="/trangchu.html">Trang chủ</a></li>
+                <li><a href="#">Giỏ hàng</a></li>
+                <li><a href="#">Đăng ký</a></li>
+                <li><a href="#">Đăng nhập</a></li>
+            </ul>
+
+            <div class="dropdown">
+                <button class="dropdown-menu">☰</button>
+                <ul class="dropdown-content">
+                    <li><a href="/trangchu.html">Trang chủ</a></li>
+                    <li><a href="#">Giỏ hàng</a></li>
+                    <li><a href="#">Đăng ký</a></li>
+                    <li><a href="#">Đăng nhập</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button onclick="searchFunction()">🔍</button>
+            </div>
+        </nav>
+        <script>
+            function searchFunction() {
+                let query = document.getElementById("searchInput").value;
+                alert("You searched for: " + query);
+            }
+        </script>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="content">
+                <h1>Travel to the Most Amazing Places on the Planet</h1>
+            </div>
+        </section>
+
+        <div class="div-tag1">          
+            <div class="tag">
+                <a target="_blank" href="/image/tag1.jpg">
+                    <img src="/image/tag1.jpg" alt="Tag1" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+
+            <div class="tag">
+                <a target="_blank" href="/image/tag2.jpg">
+                    <img src="/image/tag2.jpg" alt="Tag2" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+
+            <div class="tag">
+                <a target="_blank" href="/image/tag3.jpg">
+                    <img src="/image/tag3.jpg" alt="Tag3" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+        </div>
+
+        <div class="div-tag2">
+            <div class="tag">
+                <a target="_blank" href="/image/tag4.jpg">
+                    <img src="/image/tag4.jpg" alt="Tag4" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+            <div class="tag">
+                <a target="_blank" href="/image/tag4.jpg">
+                    <img src="/image/tag4.jpg" alt="Tag4" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+            <div class="tag">
+                <a target="_blank" href="/image/tag4.jpg">
+                    <img src="/image/tag4.jpg" alt="Tag4" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+        </div>
+
+        <div class="div-tag3">
+            <div class="tag">
+                <a target="_blank" href="/image/tag4.jpg">
+                    <img src="/image/tag4.jpg" alt="Tag4" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+            <div class="tag">
+                <a target="_blank" href="/image/tag4.jpg">
+                    <img src="/image/tag4.jpg" alt="Tag4" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+            <div class="tag">
+                <a target="_blank" href="/image/tag4.jpg">
+                    <img src="/image/tag4.jpg" alt="Tag4" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section logo-section">
+                <h2><i class="fas fa-gem"></i> FOUR TRAVEL</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec diam vel nulla tincidunt sagittis.</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Đội nhóm</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Điểm đến</h3>
+                <ul>
+                    <li><a href="#">Cần Thơ </a></li>
+                    <li><a href="#">Asia</a></li>
+                    <li><a href="#">Europe</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">South America</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Hỗ trợ</h3>
+                <ul>
+                    <li><a href="#">Trước khi đặt lịch</a></li>
+                    <li><a href="#">Trước chuyến đi</a></li>
+                    <li><a href="#">Trong chuyến đi</a></li>
+                    <li><a href="#">Vấn đề phát sinh</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section social">
+                <h3>Liên hệ với chúng tôi qua</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i><img src="/image/ig.png"> </a>
+                    <a href="#"><i class="fab fa-twitter"></i><img src="/image/tw.png"> </a>
+                    <a href="#"><i class="fab fa-facebook"></i><img src="/image/fb.png"> </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
