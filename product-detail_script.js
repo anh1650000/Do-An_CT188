@@ -997,8 +997,8 @@ if(products[productId] != null){
         imageContainer.innerHTML += "<div class='slideshow-product--img'><div class='number-img'>" + (i + 1) + " / " + products[productId].images.length + "</div><img id='product-image-"+(i+1)+"' class='product-image' src='" + products[productId].images[i] + "'style='width:100%';></div>";
 
     imageContainer.innerHTML += 
-        `<a class="previous-button onclick="changeSlideshow(${-1})>pre</a>
-        <a class="next-button onclick="changeSlideshow(${1})>next</a>`
+        `<a class="previous-button" onclick="changeSlideshow(${-1})">pre</a>
+        <a class="next-button" onclick="changeSlideshow(${1})">next</a>`
     
     // minimap hình ảnh
     imageContainer.innerHTML += "<div class='img-minimap__row' id='img-minimap__row'></div>"
@@ -1007,15 +1007,7 @@ if(products[productId] != null){
         `<div class="img-minimap__column">
             <img class="src-img-minimap" src="${products[productId].images[i]}" alt="hinh loi" onclick="changeCurrentSlideshow(${i+1})" style="width:100%">
         </div>` 
-    // ->minimap
-    // if(products[productId].images.length <= 10)
-    //     document.querySelectorAll(".img-minimap__column").forEach(column =>{
-    //         column.style.width = `${800 / products[productId].images.length}px`;
-    //     })
-    // else
-    //     document.querySelectorAll(".img-minimap__column").forEach(column =>{
-    //         column.style.width = "10%";
-    //     })
+
 
 
     // tên sản phẩm
@@ -1058,27 +1050,29 @@ function changeCurrentSlideshow(n){
 
 function slideShowImg(n){
     
-    console.log(slideImgIndex)
+    // console.log(slideImgIndex)
     slideImgIndex = n;
     let index;
     let slideshowImgs = document.getElementsByClassName("slideshow-product--img");
     let minimapImgs = document.getElementsByClassName("src-img-minimap");
+
     if(n > slideshowImgs.length)
         slideImgIndex = 1;
     if(n < 1)
         slideImgIndex = slideshowImgs.length;
+
+    // ẩn slide
     for(index = 0; index < slideshowImgs.length; index++)
         slideshowImgs[index].style.display = "none";
 
+    // giảm opacity minimap
     for (let i = 0; i < minimapImgs.length; i++) {
-        // minimapImgs[i].classList.remove("img-clicked");
         minimapImgs[i].classList.add("src-img-minimap");
         minimapImgs[i].style.opacity = "0.6";
     }
 
-    // Hiển thị slide hiện tại và thêm hiệu ứng cho minimap tương ứng
+    // show slide hiện tại, tăng opacity minimap
     slideshowImgs[slideImgIndex - 1].style.display = "block";
-    // minimapImgs[slideImgIndex - 1].classList.remove("src-img-minimap");
     minimapImgs[slideImgIndex - 1].style.opacity = "1";
 }
 
