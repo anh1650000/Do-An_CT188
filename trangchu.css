@@ -133,7 +133,7 @@ nav {
     justify-content: center;
     text-align: center;
     animation: fadeIn 2s;
-    margin: 100px;
+    margin: 2%;
 }
 h1 {
     font-size: 48px;
@@ -147,7 +147,7 @@ h1 {
     flex-wrap: nowrap;
     justify-content: space-between;
     gap:15px;
-    padding: 20px;
+    padding: 2%;
 }
 .tag {
     flex: 1 1 calc(33% - 10px);
