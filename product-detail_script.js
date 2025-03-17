@@ -1148,6 +1148,16 @@ function calculateEachPrice(typeOfPerson){
     }, 700)
 }
 
+function pre_processAddToFavorite(){
+    adultQuantity = parseInt(document.getElementById("adults").textContent)
+    childQuantity = parseInt(document.getElementById("childrens").textContent)
+    itfantQuantity = parseInt(document.getElementById("infants").textContent)
+    priceDefault = products[productId].price
+    let totalPrice = adultQuantity * priceDefault + (childQuantity * priceDefault * 0.5) + (itfantQuantity * priceDefault * 0.3)
+    js2(productId, adultQuantity, childQuantity, itfantQuantity, totalPrice)
+}
+
+
 onload = function(){
     calculateEachPrice("adults");
     calculateTotalPrice();
