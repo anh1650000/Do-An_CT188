@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background: url(/image/background.jpg) no-repeat center center/cover;
+    height: 100vh;
+
+    color: white;
+}
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+
+}
+.logo span {
+    color: lightblue;
+}
+.logo img{
+    width:20%;
+}
+.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+.menu li {
+    margin: 0 15px;
+}
+.menu li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    padding: 5px 10px;
+}
+.menu li a:hover {
+    color: lightblue;
+}
+
+
+.dropdown {
+    position: relative;
+    display: none;
+}
+.dropdown-menu {
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    padding: 5px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #07326E;
+    width: 150px;
+    text-align: left;
+}
+.dropdown-content li {
+    list-style: none;
+}
+.dropdown-content a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+.dropdown-content a:hover {
+    background-color: lightblue;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.search {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 5px;
+    padding: 3px;
+    flex-wrap: nowrap;
+}
+.search input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    width: 120px;
+}
+.search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 2s;
+    margin: 2%;
+}
+h1 {
+    font-size: 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.div-tag1, .div-tag2, .div-tag3 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap:15px;
+    padding: 2%;
+}
+.tag {
+    flex: 1 1 calc(33% - 10px);
+    border: 1px solid #436CA4;
+    box-sizing: border-box;
+    max-width: 33%;
+}
+.tag:hover {
+    border: 1px solid #436CA4;
+}
+.tag img {
+    width: 100%;
+    height: auto;
+}
+.desc {
+    padding: 15px;
+    text-align:center;
+}
+
+footer {
+    background-color: #07120E; /* Màu nền tối */
+    color: white;
+    padding: 40px 80px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 180px;
+    margin-bottom: 20px;
+}
+
+.logo-section h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo-section p {
+    font-size: 14px;
+    color: #B0B0B0;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #B0B0B0;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ffffff;
+}
+
+.social-icons a {
+    font-size: 20px;
+    color: white;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #B0B0B0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .dropdown {
+        display: block;
+    }
+}
