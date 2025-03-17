@@ -435,12 +435,13 @@ const products = [
         "time": 4,
         "price": 8990000,
         images: [
-            "/Img/Hoi_An/",
-            "",
-            "",
-            "",
-            "",
-            ""
+            "/Img/Hoi_An/352521770_6922050131.jpg",
+            "/Img/Hoi_An/6-nen-van-hoa-pho-co-cua-Hoi-An-1.jpg",
+            "/Img/Hoi_An/chua-thien-mu-wondertour-1024x614.jpg",
+            "/Img/Hoi_An/dam-lap-an-1-min.jpg",
+            "/Img/Hoi_An/Hue-24.jpg",
+            "/Img/Hoi_An/Untitled-min.jpg",
+            "/Img/Hoi_An/vuon-bi-an.jpg"
         ],
         moreInformation: {
             "tourist attractions": "Đà Nẵng, Bà Nà, Phố cổ Hội An, Huế",
@@ -508,270 +509,20 @@ const products = [
     },
     {
         "pId": "sp007",
-        "name": "Mùa hoa Tây Bắc: Hòa Bình - Mộc Châu - Điện Biên - Lai Châu - Sapa - Fansipan - Yên Bái - Hà Nội | Tặng vé tàu hỏa leo núi Mường Hoa",
-        "time": 7,
-        "price": 10690000,
-        images: [
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-        ],
-        moreInformation: {
-            "tourist attractions": "Tây Bắc, Hòa Bình, Mộc Châu, Điện Biên,...",
-            "cuisine": "Theo thực đơn, Đặc sản địa phương",
-            "object": "Cặp đôi, Gia đình nhiều thế hệ, Thanh niên",
-            "ideal time": "Quanh năm",
-            "transport": "Máy bay, Xe du lịch",
-            "promotion": "Đã bao gồm ưu đãi trong giá tour"
-        },
-        schedule: [
-            {
-                "title": "Tp.HCM - Hà Nội - Đèo Thung Khe - Mộc Châu Island",
-                "description": "<p class='more-information__description'>Quý khách tập trung tại sân bay Tân Sơn Nhất (ga trong nước), hướng dẫn viên làm thủ tục cho Quý khách đáp chuyến bay đi Hà Nội. Đến sân bay Nội Bài, xe đón đoàn khởi hành đi Mộc Châu (Sơn La) trên đường dừng tham quan:</p>\
-                                <ul class='more-information__list'>\
-                                    <li class='more-information__item'>Chụp hình <b>đèo Thung Khe</b> hay còn gọi là <b>đèo Đá Trắng</b>, nơi đây quanh năm trắng như tuyết và mây mù bao phủ tạo cảnh quan tuyệt đẹp thu hút nhiều du khách đến chụp ảnh.</li>\
-                                    <li class='more-information__item'><b>Chụp ảnh tại Đồi Chè Mộc Sương</b> – một trong những đồi chè lớn nhất tại Mộc Châu thu hút rất nhiều sự quan tâm của các tín đồ đam mê chụp ảnh.</li>\
-                                    <li class='more-information__item'><b>Quần thể phức hợp vui chơi giải trí và nghỉ dưỡng Mộc Châu Island</b> chiêm ngưỡng vẻ đẹp <b>Cầu kính Bạch Long</b> có chiều dài 632m, ở độ cao cách mặt đất 150m, là “Cây cầu kính đi bộ dài nhất thế giới” được xác lập kỷ lục Guinness vào tháng 28/5/2022. Trải nghiệm các trò chơi: Chinh phục cầu kính Bạch Long, trượt Airslide, zipline, Mộc Châu Space,... (<i>chi phí tự túc</i>).</li>\
-                                </ul>\
-                                <p class='more-information__description'>Quý khách nhận phòng khách sạn nghỉ ngơi. Buổi tối, Quý khách có thể tự do tham quan <b>khu phố Nhật Bản</b> – với nhiều khu vực khác nhau mang đậm phong cách Nhật Bản như: khu quảng trường; Sakura Café, trà đạo phong cách Nhật,... tham gia các hoạt động cuối tuần tại <b>Phố đi bộ Mộc Châu</b> hoặc tận hưởng không khí thanh bình vùng cao nguyên với tách trà nóng đậm đà.</p>\
-                                <p class='more-information__description'><b>Nghỉ đêm tại Mộc Châu</b></p>"
-            },
-            {
-                "title": "Mộc Châu - Tp. Sơn La - Điện Biên",
-                "description": "<p class='more-information__description'>Quý khách dùng bữa sáng và làm thủ tục trả phòng sớm, xe và hướng dẫn viên khởi hành tham quan:</p>\
-                                <ul class='more-information__list'>\
-                                <li class='more-information__item'><b>Thác Dải Yếm</b> – thác ngày đêm đổ xuống trắng xóa, ầm ào, không chỉ mang đến cho du khách sự thích thú trước một khung cảnh vừa huyền bí vừa kỳ vĩ của đất trời mà còn cảm giác sảng khoái khi được hòa mình vào những ngọn gió mang hơi nước mát lành.</li>\
-                                </ul>\
-                                <p class='more-information__description'>Tiếp tục hành trình, quý khách khởi hành đi Điện Biên. Trên đường <b>ngắm Đèo Pha Đin</b> – đây cũng là một trong \"tứ đại đèo\" vùng Đông Tây Bắc và được xếp cùng nhóm 6 con đèo gây ấn tượng nhất Việt Nam.</p>\
-                                <p class='more-information__description'>Quý khách nhận phòng khách sạn và dùng cơm chiều. Buổi tối, Quý khách tự do tham quan <b>Tượng đài chiến thắng Điện Biên Phủ</b> khám phá thành phố Điện Biên về đêm.</p>\
-                                <p class='more-information__description'><b>Nghỉ đêm tại Điện Biên</b></p>"
-            },
-            {
-                "title": "Điện Biên - Lai Châu",
-                "description": "<p class='more-information__description'><b>Sau khi ăn sáng và làm thủ tục trả phòng, Quý khách tham quan:</b></p>\
-                                <ul class='more-information__list'>\
-                                <li class='more-information__item'><b>Bảo tàng Chiến thắng lịch sử Điện Biên Phủ</b>: trưng bày hơn 1.000 tư liệu hình ảnh, tài liệu, hiện vật, cảnh tượng lịch sử tái hiện lại cuộc chiến hào hùng của quân và dân ta trong Chiến dịch Điện Biên Phủ năm 1954.</li>\
-                                <li class='more-information__item'><b>Chiêm ngưỡng kiệt tác bức tranh Panorama toàn cảnh \"Trận chiến Điện Biên Phủ\"</b> sống động: Tái hiện chân thực những khoảnh khắc diễn hình nhất trong Chiến dịch Điện Biên Phủ.</li>\
-                                <li class='more-information__item'>Ngắm cầu Mường Thanh, sông Nậm Rốm và con đường hoa ban trong trung tâm thành phố.</li>\
-                                <li class='more-information__item'>Tham quan và mua sắm đặc sản <b>Quà Tây Bắc Điện Biên</b> về làm quà cho người thân và gia đình như rượu Điện Biên, mật ong, sâu chít, thịt trâu hun khói, chẩm chéo, măng, các sản phẩm mây tre đan, các sản phẩm thêu, dệt thổ cẩm,...</li>\
-                                </ul>\
-                                <p class='more-information__description'><b>Quý khách khởi hành đi Lai Châu</b>, trên đường ngắm cảnh rừng núi Tây Bắc dọc theo dòng sông Nậm Na và vùng ngập nước do đập nhà máy Thủy điện Sơn La đang lên tại ngã ba sông: sông Đà, sông Nậm Na và sông Nậm Rốm.</p>\
-                                <p class='more-information__description'>Quý khách dùng cơm chiều và nhận phòng khách sạn nghỉ ngơi. Buổi tối, quý khách tự do khám phá, thưởng trà và ngắm toàn cảnh thành phố Lai Châu về đêm tại Tam Đường Tea <i>(chi phí tự túc)</i>.</p>\
-                                <p class='more-information__description'><b>Nghỉ đêm tại Lai Châu</b></p>"
-            },
-            {
-                "title": "Lai Châu - Sapa",
-                "description": "<p class='more-information__description'><strong>Quý khách dùng điểm tâm sáng và làm thủ tục trả phòng.</strong></p>\
-                                <p class='more-information__description'>Xe đưa Quý khách chinh phục đèo <strong>Ô Quy Hồ</strong> - con đèo đẹp, hùng vĩ và dài nhất trong Tứ Đại Đỉnh Đèo miền Bắc.</p>\
-                                <p class='more-information__description'>Đến với thành phố trong sương Sapa, Quý khách tham quan <strong>khu du lịch Fansipan Legend</strong> thưởng ngoạn bức tranh phong cảnh đầy màu sắc của cánh rừng nguyên sinh, thung lũng Mường Hoa.</p>\
-                                <ul class='more-information__list'>\
-                                    <li class='more-information__item'>Chinh phục đỉnh núi Fansipan với độ cao 3.143m hùng vĩ bằng cáp treo (<em>chi phí tự túc</em>).</li>\
-                                    <li class='more-information__item'>Lễ Phật tại <strong>chùa Trình</strong> hay cầu phúc lộc, bình an cho gia đình tại <strong>Bích Vân Thiền Tự</strong> trong hệ thống cảnh quan tâm linh trên đỉnh Fansipan.</li>\
-                                    <li class='more-information__item'><strong>Trải nghiệm tuyến tàu lửa Mường Hoa hiện đại nhất Việt Nam.</strong></li>\
-                                    <li class='more-information__item'><strong>Bản Cát Cát</strong> - Thăm những nếp nhà của người Mông, Dao, Giấy trong bản, tại đây du khách sẽ không khỏi ngạc nhiên trước vẻ đẹp của một trong những ngôi làng cổ đẹp nhất Sapa và có dịp được thưởng thức chương trình biểu diễn văn nghệ của người H'Mông (<em>chương trình văn nghệ diễn ra vào các thời điểm cố định trong ngày</em>).</li>\
-                                </ul>\
-                                <p class='more-information__description'>Quý khách dùng cơm chiều và nhận phòng khách sạn nghỉ ngơi.</p>\
-                                <p class='more-information__description'>Buổi tối Quý khách tự do dạo phố, ngắm <strong>nhà thờ Đá Sapa</strong> và thưởng thức đặc sản vùng cao tại <strong>Chợ đêm Sapa</strong> như: <em>thịt lợn cắp nách nướng, trứng nướng, rượu táo mèo,...</em> giao lưu với người dân tộc vùng cao.</p>\
-                                <p class='more-information__description'><strong>Nghỉ đêm tại Sapa</strong></p>"
-            },
-            {
-                "title": "Sapa - Mù Cang Chải - Nghĩa Lộ",
-                "description": "<p class='more-information__description'><strong>Trả phòng khách sạn, đoàn khởi hành tham quan Mù Cang Chải</strong>, ngang qua:\</p>\
-                                <ul class='more-information__list'>\
-                                <li class='more-information__item'><strong>Bản Lim Mông</strong> từ trên cao: đây là Bản của dân tộc Mông và là nơi có ruộng lúa đẹp nhất Mù Cang Chải. Quý khách sẽ bị mê hoặc bởi vẻ đẹp hút hồn của cung đường ruộng bậc thang nổi tiếng tại 3 xã: La Pán Tẩn, Chế Cu Nha và Zế Xu Phình. Quý khách chiêm ngưỡng những thung lũng rộng hút tầm mắt, các thửa ruộng tầng tầng lớp lớp lượn sóng theo sườn núi, ngọn núi này nối tiếp ngọn núi khác.\</li>\
-                                <li class='more-information__item'><strong>Đèo Khau Phạ</strong>: đoạn đèo dài nhất trên tuyến quốc lộ 32 được mệnh danh là một trong “tứ đại đỉnh đèo” với độ dài trên 30km.\</li>\
-                                <li class='more-information__item'><strong>Tú Lệ</strong>: quý khách sẽ ngửi được mùi hương thoang thoảng theo gió bảng lảng trên mái nhà của “cốm mới”, nơi đây nổi tiếng với xôi nếp, cốm khô.\</li>\
-                                </ul>\
-                                <p class='more-information__description'>Buổi tối, Quý khách dùng cơm chiều và thưởng thức chương trình biểu diễn <strong>múa Xòe</strong>, giao lưu và tìm hiểu nét văn hóa đặc sắc của dân tộc Thái <strong>(chương trình biểu diễn dành tặng cho đoàn từ 20 khách trở lên)</strong>.\</p>\
-                                <p class='more-information__description'><strong>Nghỉ đêm tại Nghĩa Lộ</strong>\</p>"
-            },
-            {
-                "title": "Nghĩa Lộ - Yên Bái - Hà Nội",
-                "description": "<p class='more-information__description'>Quý khách dùng bữa sáng, trả phòng khách sạn và khởi hành tham quan:</p>\
-                                <ul class='more-information__list'>\
-                                <li class='more-information__item'><strong>Đền Hùng</strong>: nơi thờ các vua Hùng có công dựng nước, tổ tiên của dân tộc Việt Nam, một quần thể kiến trúc thâm nghiêm trên núi Nghĩa Lĩnh. Quý khách dâng hương đất tổ, thăm quan <strong>đền Thượng, đền Trung, đền Hạ, Giếng Ngọc, Lăng vua Hùng</strong>.</li>\
-                                </ul>\
-                                <p class='more-information__description'><strong>Nghỉ đêm tại Hà Nội</strong></p>"
-            },
-            {
-                "title": "Hà Nội - Tp.HCM",
-                "description": "<p class='more-information__description'>Quý khách ăn sáng và trả phòng. Tiếp tục hành trình đến sân bay Nội Bài, Hướng dẫn viên hỗ trợ Quý khách làm thủ tục đáp chuyến bay về Tp.HCM. Chia tay Quý khách và kết thúc chương trình du lịch tại sân bay Tân Sơn Nhất.</p>\
-                                <p class='more-information__description'><strong>KẾT THÚC CHƯƠNG TRÌNH, CẢM ƠN VÀ TẠM BIỆT QUÝ KHÁCH!</strong></p>"
-            }
-        ]
-    },
-    {
-        "pId": "sp008",
-        "name": "Phú Quốc - Chinh Phục Đệ Nhất Tứ Đảo - Trải Nghiệm Đi Bộ Dưới Đáy Biển - Thị Trấn Hoàng Hôn - Kiss Bridge - Bãi Sao",
-        "time": 3,
-        "price": 5190000,
-        images: [
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-        ],
-        moreInformation: {
-            "tourist attractions": "Phú Quốc, Tour 4 đảo, Bãi sao, Thị trấn hoàng hôn",
-            "cuisine": "Theo thực đơn",
-            "object": "Người lớn tuổi, Cặp đôi, Gia đình nhiều thế hệ, Thanh niên, Trẻ em",
-            "ideal time": "Quanh năm",
-            "transport": "Máy bay, Xe du lịch",
-            "promotion": "Đã bao gồm ưu đãi trong tour"
-        },
-        schedule: [
-            {
-                "title": "Thành phố Hồ Chí Minh - Phú Quốc",
-                "description": "<p class='more-information__description'>Quý khách tập trung tại Sân bay Tân Sơn Nhất, ga đi Trong Nước, hướng dẫn viên hỗ trợ làm thủ tục đáp chuyến bay đi Phú Quốc. Xe đón đoàn tại sân bay đưa Quý khách về nhận phòng tại khách sạn.</p>\
-                                <p class='more-information__description'>Buổi tối, Quý khách tự do dạo <strong>chợ Đêm Phú Quốc</strong> thưởng thức hải sản <em>(chi phí tự túc)</em>.</p>\
-                                <p class='more-information__description'><strong>Nghỉ đêm tại Phú Quốc</strong>.</p>"
-            },
-            {
-                "title": "Chinh phục đệ nhất tử Đảo - Trải nghiệm đi bộ dưới đáy biển - Thị trấn Hoàng Hôn",
-                "description": "<p class='more-information__description'>Sau khi ăn sáng, xe đưa Quý khách đến <strong>Cảng An Thới, bắt đầu hành trình khám phá những hòn đảo quyến rũ, hoang sơ phía Nam đảo Phú Quốc.</strong></p>\
-                                <ul class='more-information__list'>\
-                                <li class='more-information__item'><strong>Hòn Mây Rút Trong:</strong> tấm biển tại hòn đảo được mệnh danh ‘Maldives của Việt Nam’</li>\
-                                <li class='more-information__item'><strong>Hòn Gầm Ghì:</strong> hòn đảo thú vị với các tầng đá giữa biển và làn nước trong suốt như gương</li>\
-                                <li class='more-information__item'><strong>Hòn Bườm:</strong> lặn ống thở ngắm san hô tự nhiên</li>\
-                                <li class='more-information__item'><strong>Hòn Mây Rút Ngoài:</strong> thiên đường sống ảo sở hữu vẻ đẹp hoang sơ cùng những chiếc thuyền SUP đầy màu sắc. Cả đoàn cùng <strong>quay flycam</strong> ghi lại những khoảnh khắc đáng nhớ giữa biển trời ‘đảo ngọc’ <strong>cho ra những bộ ảnh cực chất</strong> trên những <strong>chiếc SUP</strong> và xích đu xinh xắn</li>\
-                                <li class='more-information__item'>Ngoài ra, Quý khách có thể <strong>trải nghiệm bộ môn đi bộ dưới đáy biển</strong> (chi phí tự túc) - Tận mắt chiêm ngưỡng quan cảnh đặc sắc dưới đại dương, khám phá quần thể công viên san hô</li>\
-                                </ul>\
-                                <p class='more-information__description'><strong>Lưu ý:</strong> <span style='color: red;'>Tùy thuộc theo điều kiện thời tiết, Quý khách có thể trải nghiệm tham quan và lặn ngắm san hô ở các đảo khác nhau.</span></p>\
-                                <p class='more-information__description'>Tìm bình yên trong hành trình <strong>‘Đi Theo Ánh Mặt Trời’ tại Thị Trấn Hoàng Hôn check-in khu Địa Trung Hải</strong> - Rực rỡ sắc màu của một thị trấn châu Âu cổ kính với <strong>Quảng trường La Mã; Tháp đồng hồ cao 75m …</strong></p>\
-                                <ul class='more-information__list'>\
-                                <li class='more-information__item'>Hòa cùng không khí trẩy hội của <strong>Chợ đêm VUI-Fest Bazaar</strong> bên bờ biển thơ mộng</li>\
-                                <li class='more-information__item'>Thưởng trọn <strong>vẻ đẹp siêu thực của Cầu Hôn</strong> cùng ánh mặt trời rực rỡ đang dần buông xuống đường chân trời vào những ngày thời tiết đẹp.</li>\
-                                </ul>\
-                                <p class='more-information__description'><strong>Nghỉ đêm tại Phú Quốc</strong></p>"
-            },
-            {
-                "title": "Phú Quốc - Bãi Sao - Thành phố Hồ Chí Minh",
-                "description": "<p class='more-information__description'>Sau khi dùng bữa sáng tại, Quý khách trả phòng và khởi hành tham quan</p>\
-                                <ul class='more-information__list'>\
-                                <li class='more-information__item'><strong>Dinh Cậu:</strong> biểu tượng văn hoá và tín ngưỡng của đảo Phú Quốc. Nơi ngư dân địa phương gửi gắm niềm tin cho một chuyến ra khơi đánh bắt đầy ắp cá khi trở về.</li>\
-                                <li class='more-information__item'><strong>Chùa Sư Muôn (Hùng Long Tự):</strong> ngôi chùa có kiến trúc dân gian, nằm trên triền núi, mặt hướng ra biển, xung quanh cây cối xanh tốt. Đến đây du khách cảm nhận vẻ đẹp thanh tịnh, bình yên và cầu nguyện sự an lành và hạnh phúc đến với gia đình.</li>\
-                                <li class='more-information__item'><strong>Tắm biển Bãi Sao:</strong> một bãi biển dịu êm, bãi cát dài tĩnh lặng và nguyên sơ nơi đảo xanh. Tại đây Quý khách sẽ thật sự cảm thấy yên bình, thư thái và dường như cuộc sống chậm lại khi hòa mình cùng thiên nhiên.</li>\
-                                <li class='more-information__item'><strong>Quần Thể Đảo Yến Phú Quốc:</strong> hòa vào không gian xanh, du khách nghe giới thiệu quy trình sơ chế sản phẩm và mua sắm đặc sản yến sào bổ dưỡng.</li>\
-                                <li class='more-information__item'>Tham quan và mua sắm đặc sản nổi tiếng tại <strong>Nhà thùng nước mắm Hồng Đức 1 / Khải Hoàn / Phụng Hưng, Đặc sản Đức Thành, Cơ sở sản xuất ngọc trai Phú Quốc</strong> - Trưng bày các trang sức bằng ngọc trai chính hiệu được nuôi cấy tại Phú Quốc.</li>\
-                                </ul>\
-                                <p class='more-information__description'>Xe đưa đoàn ra sân bay Phú Quốc đáp chuyến bay trở về TP Hồ Chí Minh. Chia tay Quý khách và kết thúc chương trình du lịch tại sân bay Tân Sơn Nhất.</p>"
-            }
-        ]
-    },
-    {
-        "pId": "sp009",
-        "name": "Bangkok - Pattaya - Wat Arun - Ngắm Hoàng Hôn Trên Du Thuyền Sông Chao Phraya - Thưởng Thức Calypso Cabaret Show",
-        "time": 5,
-        "price": 8290000,
-        images: [
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-        ],
-        moreInformation: {
-            "tourist attractions": "Bangkok - Pattaya - Chùa Bình Minh Wat Arun",
-            "cuisine": "Buffet sáng, Theo thực đơn, Đặc sản địa phương",
-            "object": "Gia đình nhiều thế hệ",
-            "ideal time": "Quanh năm",
-            "transport": "Máy bay, Xe du lịch",
-            "promotion": "Theo các chương trình ưu đãi của công ty"
-        },
-        schedule: [
-            {
-                "title": "Bangkok - Pattaya",
-                "description": "<p class='more-information__description'>Trước giờ bay 3 tiếng 30 phút, xe và hướng dẫn viên của Vietravel Hà Nội đón đoàn tại Văn phòng số 3 Hai Bà Trưng ra sân bay Nội Bài đáp chuyến bay đi <strong>Bangkok</strong>. Đến sân bay, đoàn làm thủ tục nhập cảnh.</p>\
-                                <p class='more-information__description'>Xe đón quý khách khởi hành đến với <strong>Pattaya</strong> – thành phố biển du lịch nổi tiếng và sôi động. Trên đường đi, đoàn dừng chân tham quan:</p>\
-                                <ul class='more-information__list'>\
-                                <li class='more-information__item'><strong>Bảo tàng Lighting Art</strong> – một khu phức hợp, kết hợp giữa sự cổ điển và công nghệ hiện đại. Đến đây, quý khách sẽ được chiêm ngưỡng những cảnh quan đặc sắc của Thái Lan như: lễ hội, đền đài, văn hóa… được dựng lại bằng ánh đèn lung linh, kết hợp với thiết kế 3D hiện đại, độc đáo... Đặc biệt, đoàn sẽ được <strong>thưởng thức món xôi xoài</strong> nổi tiếng, hấp dẫn của Thái Lan.</li>\
-                                <li class='more-information__item'><strong>Thưởng thức café và bánh phủ vàng</strong> tại Sukhothai Palace.</li>\
-                                </ul>\
-                                <p class='more-information__description'>Quý khách dùng bữa tối tại nhà hàng địa phương, tự do khám phá thành phố Pattaya về đêm dưới sự hỗ trợ và giới thiệu của hướng dẫn viên bản địa.</p>\
-                                <p class='more-information__description'>Quý khách về khách sạn <strong>4*</strong> tại Pattaya nhận phòng và tự do nghỉ ngơi.</p>"
-            },
-            {
-                "title": "Bãi biển Jomtien - Chao Chee Chan",
-                "description": "<p class='more-information__description'><strong>Buổi sáng:</strong>\</p>\
-                                <ul class='more-information__list'>\
-                                    <li class='more-information__item'>Sau bữa buffet sáng tại khách sạn, đoàn tự do tắm biển tại <strong>Bãi biển Jomtien</strong> – địa điểm lý tưởng để tham gia các hoạt động thể thao trên biển. Với bờ cát trắng mịn, làn nước trong xanh và những con sóng lớn, Jomtien mang đến cho du khách những trải nghiệm tuyệt vời trong tour Thái Lan.</li>\
-                                    <li class='more-information__item'>Tham quan <strong>Chợ nổi 4 miền Pattaya</strong>, khu chợ nổi tiếng với hơn 115 cửa hàng và quầy bán hàng trên mặt nước. Điểm đặc biệt của chợ là được chia thành 4 khu vực đại diện cho 4 miền lớn của Thái Lan.</li>\
-                                </ul>\
-                                <p class='more-information__description'><strong>Buổi trưa:</strong>\</p>\
-                                <ul class='more-information__list'>\
-                                <li class='more-information__item'>Đoàn ăn trưa tại nhà hàng, nghỉ ngơi ngắn trước khi tiếp tục tham quan.</li>\
-                                </ul>\
-                                <p class='more-information__description'><strong>Buổi chiều:</strong>\</p>\
-                                <ul class='more-information__list'>\
-                                    <li class='more-information__item'><strong>Trân Bảo Phật Sơn (Khao Chee Chan):</strong> Ngọn núi có hình tượng Đức Phật khắc bằng tia laser cao 109 mét, rộng 70 mét. Phần khắc laser được dát 999kg vàng 24K, tổng trị giá 5,2 triệu USD. Đây là điểm đến linh thiêng, thu hút nhiều du khách đến chiêm bái.</li>\
-                                    <li class='more-information__item'><strong>Trung tâm triển lãm Gems Gallery:</strong> Nơi trưng bày các tác phẩm nghệ thuật bằng vàng và đá quý độc nhất, đồng thời du khách có thể tìm hiểu về công nghệ khai thác, chế tác vàng bạc, đá quý của các nghệ nhân Thái Lan.</li>\
-                                    <li class='more-information__item'><strong>Nhà máy sản xuất cao su thiên nhiên (Latex Pillow & Mattress):</strong> Tìm hiểu quy trình sản xuất cao su thiên nhiên và trải nghiệm sự êm ái của các sản phẩm từ cao su. Du khách cũng có thể mua các sản phẩm cao su thiên nhiên chính hãng tại đây.</li>\
-                                    <li class='more-information__item'><strong>Đồi Vọng Cảnh Khao Phra Tamnak:</strong> Điểm ngắm toàn cảnh thành phố Pattaya từ trên cao, lý tưởng cho những ai thích chụp ảnh và tận hưởng không gian thoáng đãng.</li>\
-                                </ul>\
-                                <p class='more-information__description'><strong>Buổi tối:</strong>\</p>\
-                                <ul class='more-information__list'>\
-                                    <li class='more-information__item'>Đoàn dùng bữa tối tại nhà hàng địa phương và trở về khách sạn nghỉ ngơi.</li>\
-                                    <li class='more-information__item'><strong>Nghỉ đêm tại khách sạn 4* Pattaya.</strong></li>\
-                                </ul>"
-            },
-            {
-                "title": "Pattaya - Bangkok - Calypso Cabaret Show",
-                "description": "<p class='more-information__description'>Quý khách dùng bữa sáng và làm thủ tục trả phòng khách sạn. Xe đưa đoàn về lại Bangkok, trên đường đoàn ghé tham quan:</p> <ul class='more-information__list'> <li class='more-information__item'><strong>Viện nghiên cứu thảo dược và huyết thanh chiết xuất từ nọc rắn</strong> và <strong>Cửa hàng bánh kẹo</strong> địa phương.</li> </ul> <p class='more-information__description'>Đến Bangkok, đoàn dùng bữa trưa tại nhà hàng địa phương và về khách sạn nhận phòng nghỉ ngơi. Buổi chiều, đoàn tham quan:</p> <ul class='more-information__list'> <li class='more-information__item'><strong>Ngắm hoàng hôn và thưởng thức bữa tối trên du thuyền sông Chao Phraya.</strong> Quý khách có thể ngắm nhìn khung cảnh về đêm tuyệt đẹp của Bangkok từ hai bên bờ sông Chao Phraya trong lúc dùng bữa tối.</li> <li class='more-information__item'><strong>Thưởng thức Calypso Cabaret show</strong> - chương trình ca múa nhạc hấp dẫn, với những màn trình diễn lộng lẫy, đầy màu sắc của các diễn viên nam đã chuyển giới đầy tài năng của Bangkok.</li> </ul> <p class='more-information__description'>Tự do mua sắm và khám phá <strong>Chợ đêm Asiatique</strong> với các gian hàng thời trang, đồ lưu niệm và quầy bán các món ăn đặc sản địa phương hấp dẫn.</p> <p class='more-information__description'>Đoàn về khách sạn nghỉ ngơi.</p> <p class='more-information__description'><strong>Nghỉ đêm tại khách sạn 4* Bangkok.</strong></p>"
-            },
-            {
-                "title": "Chùa Wat Arun - Đền Phật Vàng Bốn Mặt - Jodd Fair",
-                "description": "<p class='more-information__description'><strong>Buổi sáng:</strong>\</p>\
-                                <ul class='more-information__list'>\
-                                    <li class='more-information__item'>Sau khi dùng bữa sáng tại khách sạn, Quý khách khởi hành tham quan:</li>\
-                                    <li class='more-information__item'><strong>Chùa thuyền Wat Yannawa:</strong> Ngôi chùa có kiến trúc độc đáo với hình dạng một chiếc thuyền, kết hợp phong cách Trung Hoa và mái cao vút của lối kiến trúc Thái Lan, tạo nên một tác phẩm tuyệt vời.</li>\
-                                    <li class='more-information__item'><strong>Chùa Wat Arun:</strong> Một trong những công trình tiêu biểu và nổi tiếng nhất tại Thái Lan. Ngôi tháp chính cao 80 mét cùng bốn tháp nhỏ đại diện cho núi Meru – trung tâm của vũ trụ, được trang trí bằng gạch, vôi và hàng nghìn mảnh sành sứ màu sắc tạo nên vẻ đẹp lung linh.</li>\
-                                    <li class='more-information__item'><strong>Đền Phật Vàng Bốn Mặt:</strong> Một điểm linh thiêng, nơi du khách có thể tham quan và viếng Phật để cầu bình an và may mắn.</li>\
-                                </ul>\
-                                <p class='more-information__description'><strong>Buổi chiều:</strong>\</p>\
-                                <ul class='more-information__list'>\
-                                    <li class='more-information__item'>Quý khách tự do mua sắm tại các trung tâm thương mại lớn như <strong>Big C, Central World</strong>.</li>\
-                                    <li class='more-information__item'>Khám phá <strong>chợ đêm Jodd Fair</strong> – nơi tập trung nhiều gian hàng ẩm thực đường phố và đồ lưu niệm độc đáo.</li>\
-                                    <li class='more-information__item'>Tự túc ăn tối với các món đặc sản địa phương.</li>\
-                                </ul>\
-                                <p class='more-information__description'><strong>Buổi tối:</strong>\</p>\
-                                <ul class='more-information__list'>\
-                                    <li class='more-information__item'><strong>Nghỉ đêm tại khách sạn 4* Bangkok.</strong></li>\
-                                </ul>"
-            },
-            {
-                "title": "Bangkok - Hà Nội",
-                "description": "<p class='more-information__description'><strong>Buổi sáng:</strong>\</p>\
-                                <ul class='more-information__list'>\
-                                    <li class='more-information__item'>Quý khách dùng bữa sáng tại khách sạn.</li>\
-                                    <li class='more-information__item'>Đoàn làm thủ tục trả phòng và tự do cho đến giờ xe đưa ra sân bay.</li>\
-                                    <li class='more-information__item'>Di chuyển đến sân bay để làm thủ tục lên máy bay về Việt Nam.</li>\
-                                </ul>\
-                                <p class='more-information__description'><strong>Kết thúc chương trình:</strong>\</p>\
-                                <ul class='more-information__list'>\
-                                    <li class='more-information__item'>Đến sân bay Nội Bài, kết thúc chuyến đi.</li>\
-                                    <li class='more-information__item'>Hướng dẫn viên chia tay và hẹn gặp lại Quý khách trong các chương trình tour tiếp theo.</li>\
-                                </ul>"
-            }
-        ]
-    },
-    {
-        "pId": "sp010",
         "name": "Tây Âu: Pháp - Bỉ - Hà Lan - Luxembourg - Thụy Sĩ - Đức (Lễ hội hoa Tulip Keukenhof)",
         "time": 9,
         "price": 60990000,
         images: [
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            "/Img/France/0c5fc82d6fc2af33d39bae9909e50f41.webp",
+            "/Img/France/9dd54d0d0fdfa09c68a92319444b099f.webp",
+            "/Img/France/bao-tang-louvre.jpg",
+            "/Img/France/C790AC28-6CCE-423A-824A-B76D721D4291-scaled.jpeg",
+            "/Img/France/khai-hoan-mon-13.webp",
+            "/Img/France/Luxembourg.jpg",
+            "/Img/France/Mega-Grand-World-ha-noi-o-dau-1.jpg",
+            "/Img/France/shutterstock_1899827659 edit.avif",
+            "/Img/France/shutterstock_2118458942_ss_non-editorial_jnjpwq.avif",
+            "/Img/France/ngoi-lang-co-o-ha-lan-co-may-thoi-gian-dua-du-khach-ve-the-ki-truoc-231234.webp"
         ],
         moreInformation: {
             "tourist attractions": "Paris, Đuc, Hà Lan, Amsterdam, Thuy Si, Luxembourg",
@@ -978,6 +729,166 @@ const products = [
                                     <li class='more-information__item'><strong>Vị trí khách sạn:</strong> không gần trung tâm.</li>\
                                     <li class='more-information__item'><strong>Tiêu chuẩn khách sạn 3*</strong>: diện tích phòng nhỏ, không khuyến khích khách ở 3 người/phòng. Nếu có phòng 3 người, sẽ là phòng 2 người kê thêm giường phụ nhỏ hoặc sofa bed.</li>\
                                     <li class='more-information__item'><strong>Bữa sáng kiểu Continental Breakfast</strong>: gồm bánh mì, sữa, nước trái cây, bơ mứt, thịt nguội, trứng, xúc xích, phô mai, trà, cà phê.</li>\
+                                </ul>"
+            }
+        ]
+    },
+    {
+        "pId": "sp008",
+        "name": "Phú Quốc - Chinh Phục Đệ Nhất Tứ Đảo - Trải Nghiệm Đi Bộ Dưới Đáy Biển - Thị Trấn Hoàng Hôn - Kiss Bridge - Bãi Sao",
+        "time": 3,
+        "price": 5190000,
+        images: [
+            "/Img/Phu_Quoc/dia-trung-hai-Italy-Cinque-Terre-1.jpg",
+            "/Img/Phu_Quoc/Bãi-Sao-Phú-Quốc.jpg",
+            "/Img/Phu_Quoc/check-in-dau-truong-la-ma-tai-ga-cap-treo-hon-thom.jpg",
+            "/Img/Phu_Quoc/dinh-cau-phu-quoc-8.webp",
+            "/Img/Phu_Quoc/thap-dong-ho-phu-quoc-tai-thi-tran-hoang-hon-sunset-town-7.jpg",
+            "/Img/Phu_Quoc/hon-may-rut-3-1348.jpg",
+            "/Img/Phu_Quoc/thi-tran-hoang-hon-ivivu-2.jpg",
+            "/Img/Phu_Quoc/tour-cano-dao-phu-quoc-rooty-trip-14-01-1024x683.jpg"
+        ],
+        moreInformation: {
+            "tourist attractions": "Phú Quốc, Tour 4 đảo, Bãi sao, Thị trấn hoàng hôn",
+            "cuisine": "Theo thực đơn",
+            "object": "Người lớn tuổi, Cặp đôi, Gia đình nhiều thế hệ, Thanh niên, Trẻ em",
+            "ideal time": "Quanh năm",
+            "transport": "Máy bay, Xe du lịch",
+            "promotion": "Đã bao gồm ưu đãi trong tour"
+        },
+        schedule: [
+            {
+                "title": "Thành phố Hồ Chí Minh - Phú Quốc",
+                "description": "<p class='more-information__description'>Quý khách tập trung tại Sân bay Tân Sơn Nhất, ga đi Trong Nước, hướng dẫn viên hỗ trợ làm thủ tục đáp chuyến bay đi Phú Quốc. Xe đón đoàn tại sân bay đưa Quý khách về nhận phòng tại khách sạn.</p>\
+                                <p class='more-information__description'>Buổi tối, Quý khách tự do dạo <strong>chợ Đêm Phú Quốc</strong> thưởng thức hải sản <em>(chi phí tự túc)</em>.</p>\
+                                <p class='more-information__description'><strong>Nghỉ đêm tại Phú Quốc</strong>.</p>"
+            },
+            {
+                "title": "Chinh phục đệ nhất tử Đảo - Trải nghiệm đi bộ dưới đáy biển - Thị trấn Hoàng Hôn",
+                "description": "<p class='more-information__description'>Sau khi ăn sáng, xe đưa Quý khách đến <strong>Cảng An Thới, bắt đầu hành trình khám phá những hòn đảo quyến rũ, hoang sơ phía Nam đảo Phú Quốc.</strong></p>\
+                                <ul class='more-information__list'>\
+                                <li class='more-information__item'><strong>Hòn Mây Rút Trong:</strong> tấm biển tại hòn đảo được mệnh danh ‘Maldives của Việt Nam’</li>\
+                                <li class='more-information__item'><strong>Hòn Gầm Ghì:</strong> hòn đảo thú vị với các tầng đá giữa biển và làn nước trong suốt như gương</li>\
+                                <li class='more-information__item'><strong>Hòn Bườm:</strong> lặn ống thở ngắm san hô tự nhiên</li>\
+                                <li class='more-information__item'><strong>Hòn Mây Rút Ngoài:</strong> thiên đường sống ảo sở hữu vẻ đẹp hoang sơ cùng những chiếc thuyền SUP đầy màu sắc. Cả đoàn cùng <strong>quay flycam</strong> ghi lại những khoảnh khắc đáng nhớ giữa biển trời ‘đảo ngọc’ <strong>cho ra những bộ ảnh cực chất</strong> trên những <strong>chiếc SUP</strong> và xích đu xinh xắn</li>\
+                                <li class='more-information__item'>Ngoài ra, Quý khách có thể <strong>trải nghiệm bộ môn đi bộ dưới đáy biển</strong> (chi phí tự túc) - Tận mắt chiêm ngưỡng quan cảnh đặc sắc dưới đại dương, khám phá quần thể công viên san hô</li>\
+                                </ul>\
+                                <p class='more-information__description'><strong>Lưu ý:</strong> <span style='color: red;'>Tùy thuộc theo điều kiện thời tiết, Quý khách có thể trải nghiệm tham quan và lặn ngắm san hô ở các đảo khác nhau.</span></p>\
+                                <p class='more-information__description'>Tìm bình yên trong hành trình <strong>‘Đi Theo Ánh Mặt Trời’ tại Thị Trấn Hoàng Hôn check-in khu Địa Trung Hải</strong> - Rực rỡ sắc màu của một thị trấn châu Âu cổ kính với <strong>Quảng trường La Mã; Tháp đồng hồ cao 75m …</strong></p>\
+                                <ul class='more-information__list'>\
+                                <li class='more-information__item'>Hòa cùng không khí trẩy hội của <strong>Chợ đêm VUI-Fest Bazaar</strong> bên bờ biển thơ mộng</li>\
+                                <li class='more-information__item'>Thưởng trọn <strong>vẻ đẹp siêu thực của Cầu Hôn</strong> cùng ánh mặt trời rực rỡ đang dần buông xuống đường chân trời vào những ngày thời tiết đẹp.</li>\
+                                </ul>\
+                                <p class='more-information__description'><strong>Nghỉ đêm tại Phú Quốc</strong></p>"
+            },
+            {
+                "title": "Phú Quốc - Bãi Sao - Thành phố Hồ Chí Minh",
+                "description": "<p class='more-information__description'>Sau khi dùng bữa sáng tại, Quý khách trả phòng và khởi hành tham quan</p>\
+                                <ul class='more-information__list'>\
+                                <li class='more-information__item'><strong>Dinh Cậu:</strong> biểu tượng văn hoá và tín ngưỡng của đảo Phú Quốc. Nơi ngư dân địa phương gửi gắm niềm tin cho một chuyến ra khơi đánh bắt đầy ắp cá khi trở về.</li>\
+                                <li class='more-information__item'><strong>Chùa Sư Muôn (Hùng Long Tự):</strong> ngôi chùa có kiến trúc dân gian, nằm trên triền núi, mặt hướng ra biển, xung quanh cây cối xanh tốt. Đến đây du khách cảm nhận vẻ đẹp thanh tịnh, bình yên và cầu nguyện sự an lành và hạnh phúc đến với gia đình.</li>\
+                                <li class='more-information__item'><strong>Tắm biển Bãi Sao:</strong> một bãi biển dịu êm, bãi cát dài tĩnh lặng và nguyên sơ nơi đảo xanh. Tại đây Quý khách sẽ thật sự cảm thấy yên bình, thư thái và dường như cuộc sống chậm lại khi hòa mình cùng thiên nhiên.</li>\
+                                <li class='more-information__item'><strong>Quần Thể Đảo Yến Phú Quốc:</strong> hòa vào không gian xanh, du khách nghe giới thiệu quy trình sơ chế sản phẩm và mua sắm đặc sản yến sào bổ dưỡng.</li>\
+                                <li class='more-information__item'>Tham quan và mua sắm đặc sản nổi tiếng tại <strong>Nhà thùng nước mắm Hồng Đức 1 / Khải Hoàn / Phụng Hưng, Đặc sản Đức Thành, Cơ sở sản xuất ngọc trai Phú Quốc</strong> - Trưng bày các trang sức bằng ngọc trai chính hiệu được nuôi cấy tại Phú Quốc.</li>\
+                                </ul>\
+                                <p class='more-information__description'>Xe đưa đoàn ra sân bay Phú Quốc đáp chuyến bay trở về TP Hồ Chí Minh. Chia tay Quý khách và kết thúc chương trình du lịch tại sân bay Tân Sơn Nhất.</p>"
+            }
+        ]
+    },
+    {
+        "pId": "sp009",
+        "name": "Bangkok - Pattaya - Wat Arun - Ngắm Hoàng Hôn Trên Du Thuyền Sông Chao Phraya - Thưởng Thức Calypso Cabaret Show",
+        "time": 5,
+        "price": 8290000,
+        images: [
+            "/Img/Thailand/DENTHAI.jpg",
+            "/Img/Thailand/inside-asiatique.jpg",
+            "/Img/Thailand/jpg.webp",
+            "/Img/Thailand/Kham-pha-Chua-thuyen-Wat-Yannawa-doc-nhat-thanh-Bangkok-hinh-1.jpg",
+            "/Img/Thailand/ngoi-chua-tuyet-dep-o-thai-lan-duoc-gioi-tre-ran-ran-check-in-ivivu-2-1024x683.jpg",
+            "/Img/Thailand/Nong-Nooch-Thailand_190979573.jpg",
+            "/Img/Thailand/tfd__1_7368_thai.webp",
+        ],
+        moreInformation: {
+            "tourist attractions": "Bangkok - Pattaya - Chùa Bình Minh Wat Arun",
+            "cuisine": "Buffet sáng, Theo thực đơn, Đặc sản địa phương",
+            "object": "Gia đình nhiều thế hệ",
+            "ideal time": "Quanh năm",
+            "transport": "Máy bay, Xe du lịch",
+            "promotion": "Theo các chương trình ưu đãi của công ty"
+        },
+        schedule: [
+            {
+                "title": "Bangkok - Pattaya",
+                "description": "<p class='more-information__description'>Trước giờ bay 3 tiếng 30 phút, xe và hướng dẫn viên của Vietravel Hà Nội đón đoàn tại Văn phòng số 3 Hai Bà Trưng ra sân bay Nội Bài đáp chuyến bay đi <strong>Bangkok</strong>. Đến sân bay, đoàn làm thủ tục nhập cảnh.</p>\
+                                <p class='more-information__description'>Xe đón quý khách khởi hành đến với <strong>Pattaya</strong> – thành phố biển du lịch nổi tiếng và sôi động. Trên đường đi, đoàn dừng chân tham quan:</p>\
+                                <ul class='more-information__list'>\
+                                <li class='more-information__item'><strong>Bảo tàng Lighting Art</strong> – một khu phức hợp, kết hợp giữa sự cổ điển và công nghệ hiện đại. Đến đây, quý khách sẽ được chiêm ngưỡng những cảnh quan đặc sắc của Thái Lan như: lễ hội, đền đài, văn hóa… được dựng lại bằng ánh đèn lung linh, kết hợp với thiết kế 3D hiện đại, độc đáo... Đặc biệt, đoàn sẽ được <strong>thưởng thức món xôi xoài</strong> nổi tiếng, hấp dẫn của Thái Lan.</li>\
+                                <li class='more-information__item'><strong>Thưởng thức café và bánh phủ vàng</strong> tại Sukhothai Palace.</li>\
+                                </ul>\
+                                <p class='more-information__description'>Quý khách dùng bữa tối tại nhà hàng địa phương, tự do khám phá thành phố Pattaya về đêm dưới sự hỗ trợ và giới thiệu của hướng dẫn viên bản địa.</p>\
+                                <p class='more-information__description'>Quý khách về khách sạn <strong>4*</strong> tại Pattaya nhận phòng và tự do nghỉ ngơi.</p>"
+            },
+            {
+                "title": "Bãi biển Jomtien - Chao Chee Chan",
+                "description": "<p class='more-information__description'><strong>Buổi sáng:</strong>\</p>\
+                                <ul class='more-information__list'>\
+                                    <li class='more-information__item'>Sau bữa buffet sáng tại khách sạn, đoàn tự do tắm biển tại <strong>Bãi biển Jomtien</strong> – địa điểm lý tưởng để tham gia các hoạt động thể thao trên biển. Với bờ cát trắng mịn, làn nước trong xanh và những con sóng lớn, Jomtien mang đến cho du khách những trải nghiệm tuyệt vời trong tour Thái Lan.</li>\
+                                    <li class='more-information__item'>Tham quan <strong>Chợ nổi 4 miền Pattaya</strong>, khu chợ nổi tiếng với hơn 115 cửa hàng và quầy bán hàng trên mặt nước. Điểm đặc biệt của chợ là được chia thành 4 khu vực đại diện cho 4 miền lớn của Thái Lan.</li>\
+                                </ul>\
+                                <p class='more-information__description'><strong>Buổi trưa:</strong>\</p>\
+                                <ul class='more-information__list'>\
+                                <li class='more-information__item'>Đoàn ăn trưa tại nhà hàng, nghỉ ngơi ngắn trước khi tiếp tục tham quan.</li>\
+                                </ul>\
+                                <p class='more-information__description'><strong>Buổi chiều:</strong>\</p>\
+                                <ul class='more-information__list'>\
+                                    <li class='more-information__item'><strong>Trân Bảo Phật Sơn (Khao Chee Chan):</strong> Ngọn núi có hình tượng Đức Phật khắc bằng tia laser cao 109 mét, rộng 70 mét. Phần khắc laser được dát 999kg vàng 24K, tổng trị giá 5,2 triệu USD. Đây là điểm đến linh thiêng, thu hút nhiều du khách đến chiêm bái.</li>\
+                                    <li class='more-information__item'><strong>Trung tâm triển lãm Gems Gallery:</strong> Nơi trưng bày các tác phẩm nghệ thuật bằng vàng và đá quý độc nhất, đồng thời du khách có thể tìm hiểu về công nghệ khai thác, chế tác vàng bạc, đá quý của các nghệ nhân Thái Lan.</li>\
+                                    <li class='more-information__item'><strong>Nhà máy sản xuất cao su thiên nhiên (Latex Pillow & Mattress):</strong> Tìm hiểu quy trình sản xuất cao su thiên nhiên và trải nghiệm sự êm ái của các sản phẩm từ cao su. Du khách cũng có thể mua các sản phẩm cao su thiên nhiên chính hãng tại đây.</li>\
+                                    <li class='more-information__item'><strong>Đồi Vọng Cảnh Khao Phra Tamnak:</strong> Điểm ngắm toàn cảnh thành phố Pattaya từ trên cao, lý tưởng cho những ai thích chụp ảnh và tận hưởng không gian thoáng đãng.</li>\
+                                </ul>\
+                                <p class='more-information__description'><strong>Buổi tối:</strong>\</p>\
+                                <ul class='more-information__list'>\
+                                    <li class='more-information__item'>Đoàn dùng bữa tối tại nhà hàng địa phương và trở về khách sạn nghỉ ngơi.</li>\
+                                    <li class='more-information__item'><strong>Nghỉ đêm tại khách sạn 4* Pattaya.</strong></li>\
+                                </ul>"
+            },
+            {
+                "title": "Pattaya - Bangkok - Calypso Cabaret Show",
+                "description": "<p class='more-information__description'>Quý khách dùng bữa sáng và làm thủ tục trả phòng khách sạn. Xe đưa đoàn về lại Bangkok, trên đường đoàn ghé tham quan:</p> <ul class='more-information__list'> <li class='more-information__item'><strong>Viện nghiên cứu thảo dược và huyết thanh chiết xuất từ nọc rắn</strong> và <strong>Cửa hàng bánh kẹo</strong> địa phương.</li> </ul> <p class='more-information__description'>Đến Bangkok, đoàn dùng bữa trưa tại nhà hàng địa phương và về khách sạn nhận phòng nghỉ ngơi. Buổi chiều, đoàn tham quan:</p> <ul class='more-information__list'> <li class='more-information__item'><strong>Ngắm hoàng hôn và thưởng thức bữa tối trên du thuyền sông Chao Phraya.</strong> Quý khách có thể ngắm nhìn khung cảnh về đêm tuyệt đẹp của Bangkok từ hai bên bờ sông Chao Phraya trong lúc dùng bữa tối.</li> <li class='more-information__item'><strong>Thưởng thức Calypso Cabaret show</strong> - chương trình ca múa nhạc hấp dẫn, với những màn trình diễn lộng lẫy, đầy màu sắc của các diễn viên nam đã chuyển giới đầy tài năng của Bangkok.</li> </ul> <p class='more-information__description'>Tự do mua sắm và khám phá <strong>Chợ đêm Asiatique</strong> với các gian hàng thời trang, đồ lưu niệm và quầy bán các món ăn đặc sản địa phương hấp dẫn.</p> <p class='more-information__description'>Đoàn về khách sạn nghỉ ngơi.</p> <p class='more-information__description'><strong>Nghỉ đêm tại khách sạn 4* Bangkok.</strong></p>"
+            },
+            {
+                "title": "Chùa Wat Arun - Đền Phật Vàng Bốn Mặt - Jodd Fair",
+                "description": "<p class='more-information__description'><strong>Buổi sáng:</strong>\</p>\
+                                <ul class='more-information__list'>\
+                                    <li class='more-information__item'>Sau khi dùng bữa sáng tại khách sạn, Quý khách khởi hành tham quan:</li>\
+                                    <li class='more-information__item'><strong>Chùa thuyền Wat Yannawa:</strong> Ngôi chùa có kiến trúc độc đáo với hình dạng một chiếc thuyền, kết hợp phong cách Trung Hoa và mái cao vút của lối kiến trúc Thái Lan, tạo nên một tác phẩm tuyệt vời.</li>\
+                                    <li class='more-information__item'><strong>Chùa Wat Arun:</strong> Một trong những công trình tiêu biểu và nổi tiếng nhất tại Thái Lan. Ngôi tháp chính cao 80 mét cùng bốn tháp nhỏ đại diện cho núi Meru – trung tâm của vũ trụ, được trang trí bằng gạch, vôi và hàng nghìn mảnh sành sứ màu sắc tạo nên vẻ đẹp lung linh.</li>\
+                                    <li class='more-information__item'><strong>Đền Phật Vàng Bốn Mặt:</strong> Một điểm linh thiêng, nơi du khách có thể tham quan và viếng Phật để cầu bình an và may mắn.</li>\
+                                </ul>\
+                                <p class='more-information__description'><strong>Buổi chiều:</strong>\</p>\
+                                <ul class='more-information__list'>\
+                                    <li class='more-information__item'>Quý khách tự do mua sắm tại các trung tâm thương mại lớn như <strong>Big C, Central World</strong>.</li>\
+                                    <li class='more-information__item'>Khám phá <strong>chợ đêm Jodd Fair</strong> – nơi tập trung nhiều gian hàng ẩm thực đường phố và đồ lưu niệm độc đáo.</li>\
+                                    <li class='more-information__item'>Tự túc ăn tối với các món đặc sản địa phương.</li>\
+                                </ul>\
+                                <p class='more-information__description'><strong>Buổi tối:</strong>\</p>\
+                                <ul class='more-information__list'>\
+                                    <li class='more-information__item'><strong>Nghỉ đêm tại khách sạn 4* Bangkok.</strong></li>\
+                                </ul>"
+            },
+            {
+                "title": "Bangkok - Hà Nội",
+                "description": "<p class='more-information__description'><strong>Buổi sáng:</strong>\</p>\
+                                <ul class='more-information__list'>\
+                                    <li class='more-information__item'>Quý khách dùng bữa sáng tại khách sạn.</li>\
+                                    <li class='more-information__item'>Đoàn làm thủ tục trả phòng và tự do cho đến giờ xe đưa ra sân bay.</li>\
+                                    <li class='more-information__item'>Di chuyển đến sân bay để làm thủ tục lên máy bay về Việt Nam.</li>\
+                                </ul>\
+                                <p class='more-information__description'><strong>Kết thúc chương trình:</strong>\</p>\
+                                <ul class='more-information__list'>\
+                                    <li class='more-information__item'>Đến sân bay Nội Bài, kết thúc chuyến đi.</li>\
+                                    <li class='more-information__item'>Hướng dẫn viên chia tay và hẹn gặp lại Quý khách trong các chương trình tour tiếp theo.</li>\
                                 </ul>"
             }
         ]
