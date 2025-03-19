@@ -1,6 +1,6 @@
 const products = [
     {
-        "pId": "sp001",
+        "pId": "1",
         "name": "Bến Tre-Vĩnh Long-Cần Thơ. Sắc xanh nơi hạ nguồn Mê Kông | Bến Tre - “Nghe dòng sông kể chuyện” - Vĩnh Long - Thưởng thức ẩm thực tiêu biểu Việt Nam - Cần Thơ - Nghỉ dưỡng resort tương đương 4 sao",
         "time": 3,
         "price": 3990000,
@@ -108,7 +108,7 @@ const products = [
         ]
     },
     {
-        "pId": "sp002",
+        "pId": "2",
         "name": "Cao Bằng - Thác Bản Giốc - Ba Bể",
         "time": 3,
         "price": 3290000,
@@ -171,7 +171,7 @@ const products = [
         ]
     },
     {
-        "pId": "sp003",
+        "pId": "3",
         "name": "Đà Lạt - Muôn Ngàn Trải Nghiệm: Thác Bobla - Dapa Hill - Thung Lũng Tình Yêu - Chinh Phục Cầu Kính Ngàn Thông 7D",
         "time": 3,
         "price": 2690000,
@@ -244,7 +244,7 @@ const products = [
         ]
     },
     {
-        "pId": "sp004",
+        "pId": "4",
         "name": "Lạc bước xứ sở ngàn mây| Hà Giang - Lũng Cú - Đồng Văn - Sapa - Fansipan",
         "time": 7,
         "price": 10890000,
@@ -348,7 +348,7 @@ const products = [
         ]
     },
     {
-        "pId": "sp005",
+        "pId": "5",
         "name": "Miền Bắc: Hạ Long - Vịnh Lan Hạ - Cát Bà - Vũ Điệu biển khơi ( Trải nghiệm du thuyền đằng cấp Paradise Grand & M-Gallery Hotel Perle D’Orient )",
         "time": 4,
         "price": 39990000,
@@ -430,7 +430,7 @@ const products = [
         ]
     },
     {
-        "pId": "sp006",
+        "pId": "6",
         "name": "Đà Nẵng - KDL Bà Nà- Đầm Lập An - Phố cổ Hội An - Huế - Làng hương Thuỷ Xuân",
         "time": 4,
         "price": 8990000,
@@ -508,7 +508,7 @@ const products = [
         ]
     },
     {
-        "pId": "sp007",
+        "pId": "7",
         "name": "Tây Âu: Pháp - Bỉ - Hà Lan - Luxembourg - Thụy Sĩ - Đức (Lễ hội hoa Tulip Keukenhof)",
         "time": 9,
         "price": 60990000,
@@ -734,7 +734,7 @@ const products = [
         ]
     },
     {
-        "pId": "sp008",
+        "pId": "8",
         "name": "Phú Quốc - Chinh Phục Đệ Nhất Tứ Đảo - Trải Nghiệm Đi Bộ Dưới Đáy Biển - Thị Trấn Hoàng Hôn - Kiss Bridge - Bãi Sao",
         "time": 3,
         "price": 5190000,
@@ -796,7 +796,7 @@ const products = [
         ]
     },
     {
-        "pId": "sp009",
+        "pId": "9",
         "name": "Bangkok - Pattaya - Wat Arun - Ngắm Hoàng Hôn Trên Du Thuyền Sông Chao Phraya - Thưởng Thức Calypso Cabaret Show",
         "time": 5,
         "price": 8290000,
@@ -1022,18 +1022,21 @@ function changeQuantity(typeOfPerson, quantityChange){
     }
 }
 
-function calculateTotalPrice(){
-    document.getElementById("total-price").textContent = "Đang tính..."
-    setTimeout(()=>{
-        priceDefault = products[productId].price
-        let adultQuantity = parseInt(document.getElementById("adults").textContent)
-        let childQuantity = parseInt(document.getElementById("childrens").textContent)
-        let itfantQuantity = parseInt(document.getElementById("infants").textContent)
-        let totalPrice = adultQuantity * priceDefault + (childQuantity * priceDefault * 0.5) + (itfantQuantity * priceDefault * 0.3)
-        document.getElementById("total-price").textContent = totalPrice.toLocaleString() + "    VND"
-    }, 700)
-        
+let totalPriceValue = 0;
+
+function calculateTotalPrice() {
+    document.getElementById("total-price").textContent = "Đang tính...";
+    setTimeout(() => {
+        const priceDefault = products[productId].price;
+        const adultQuantity = parseInt(document.getElementById("adults").textContent);
+        const childQuantity = parseInt(document.getElementById("childrens").textContent);
+        const infantQuantity = parseInt(document.getElementById("infants").textContent);
+        totalPriceValue = adultQuantity * priceDefault + (childQuantity * priceDefault * 0.5) + (infantQuantity * priceDefault * 0.3);
+        document.getElementById("total-price").textContent = totalPriceValue.toLocaleString() + " VND";
+    }, 700);
 }
+
+window.totalPriceValue = totalPriceValue;
 
 function calculateEachPrice(typeOfPerson){
     if(typeOfPerson == ""){
@@ -1072,4 +1075,51 @@ function pre_processAddToFavorite(){
 onload = function(){
     calculateEachPrice("adults");
     calculateTotalPrice();
+}
+
+
+
+document.getElementById("button__favorite").addEventListener("click", addToFavorite);
+
+function getProductIdFromURL() {
+    let params = new URLSearchParams(window.location.search);
+    let productId = params.get("product-id");
+    return productId;
+}
+
+function addToFavorite() {
+    let tourId = getProductIdFromURL();
+    
+    if (!tourId) {
+        alert("Không tìm thấy tour!");
+        return;
+    }
+
+    const tour = products.find(product => product.pId === tourId);
+
+    if (!tour) {
+        alert("Không tìm thấy thông tin tour!");
+        return;
+    }
+    const adults = parseInt(document.getElementById("adults").textContent) || 0; 
+    const children = parseInt(document.getElementById("childrens").textContent) || 0; 
+    const infants = parseInt(document.getElementById("infants").textContent) || 0; 
+    const price = tour.price;
+    const totalPrice = adults * price + (children * price * 0.5) + (infants * price * 0.3);
+    const image = (tour.images && tour.images.length > 0) ? tour.images[0] : "default.jpg";
+    let favorites = JSON.parse(localStorage.getItem("favoriteTours")) || [];
+    const existingIndex = favorites.findIndex(fav => fav.pId === tourId);
+    if (existingIndex === -1) {
+        favorites.push({ pId: tourId, name: tour.name, price, adults, children, infants, totalPrice,image});
+        alert("Đã thêm vào mục yêu thích!");
+    } else {
+        favorites[existingIndex].adults = adults;
+        favorites[existingIndex].children = children;
+        favorites[existingIndex].infants = infants;
+        favorites[existingIndex].totalPrice = totalPrice;
+        favorites[existingIndex].image = image;
+        alert("Đã cập nhật số lượng trong mục yêu thích!");
+    }
+
+    localStorage.setItem("favoriteTours", JSON.stringify(favorites));
 }
