@@ -1,0 +1,113 @@
+/* Cơ bản */
+body {
+    font-family: "Petrona", sans-serif;
+    font-size: 18px;
+    background-color: #0e1c24;
+    color: #dadada;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+body {
+    padding-top: 80px; 
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    z-index: 1000;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.logo span {
+    color: lightblue;
+}
+.logo img {
+    width: 50px;
+    margin-left: 10px;
+}
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+}
+.menu li {
+    margin: 0 15px;
+}
+.menu li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    padding: 5px 10px;
+}
+.menu li a:hover {
+    color: lightblue;
+}
+
+/* Tiêu đề */
+h1 {
+    margin-top: 80px;
+    font-size: 32px;
+}
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #1b2b34;
+    border-radius: 10px;
+    overflow: hidden;
+}
+th, td {
+    border: 1px solid #2e3b44;
+    padding: 15px;
+    text-align: center;
+}
+th {
+    background-color: #22313f;
+    color: white;
+}
+td img {
+    width: 80px;
+    border-radius: 5px;
+}
+
+/* Nút Xóa */
+button {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background: #cc0000;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu {
+        flex-direction: column;
+    }
+    table {
+        font-size: 14px;
+    }
+    td img {
+        width: 60px;
+    }
+}
