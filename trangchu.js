@@ -1,3 +1,12 @@
+const productsName = [
+    {
+        "pId": "1",
+        "name": "Bến Tre-Vĩnh Long-Cần Thơ"
+    },
+    // ########
+
+];
+
 const productList = document.getElementById("product-list");
 
 // Duyệt danh sách sản phẩm và thêm vào HTML

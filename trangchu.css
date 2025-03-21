@@ -3,10 +3,12 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+
 body {
     background: url(/Img/background.jpg) no-repeat center center/cover;
     height: 100vh;
     color: #dadada;
+    background-color: #0e1c24;
 }
 
 header {
@@ -77,6 +79,7 @@ nav {
 
 .dropdown {
     position: relative;
+    display: none;
 }
 
 .dropdown-menu {
@@ -92,7 +95,7 @@ nav {
     position: absolute;
     top: 40px;
     right: 0;
-    background: #3a4d54;
+    background: #162630;
     width: 150px;
     text-align: left;
 }
@@ -177,17 +180,18 @@ h1 {
 }
 .product h3 {
     font-size:2vw;
-    color: #07120E;
+    color: #dadada;
 }
 .product p {
     float:right;
-    color: #07120E;
+    /* color: #07120E; */
     font-size:2vw;
 }
 .buy {
     font-size:2vw;
+    font-weight: bold;
     text-decoration: none;
-    color:#000080;
+    color:#dadada;
 }
 .desc {
     padding: 15px;
@@ -211,23 +215,23 @@ h1 {
 }
 .review h2 {
     font-size: 4vw;
-    color:#07120E;
+    /* color:#07120E; */
     padding: 10px;
     text-align: center;
 }
 .review h2:hover {
     transform: skew(25deg);
     background: linear-gradient(to right, #000080, #00FFFF);
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     -webkit-text-fill-color: transparent;
 }
 .review p {
-    color:#07120E;
+    /* color:#07120E; */
     font-size: 2.5vw;
 }
-.review div{
+/* .review div{
     
-}
+} */
 footer {
     background-color: #07120E; /* Màu nền tối */
     color: #dadada;
