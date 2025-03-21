@@ -12,7 +12,36 @@
     </head>
     <body>
         <header>
-
+            <nav>
+                <div onclick="window.location.href='/trangchu.html'" class="logo">Four<span>Travel</span><img id="fourtravel" src="/Img/logo.png" style="cursor: pointer;"> </div>
+                <ul class="menu">
+                    <li><a href="/trangchu.html">Trang chủ</a></li>
+                    <li><a href="/favorites.html">Yêu thích</a></li>
+                    <li><a href="#">Đăng ký</a></li>
+                    <li><a href="#">Đăng nhập</a></li>
+                </ul>
+    
+                <div class="dropdown">
+                    <button class="dropdown-menu">☰</button>
+                    <ul class="dropdown-content">
+                        <li><a href="/trangchu.html">Trang chủ</a></li>
+                        <li><a href="/favorites.html">Yêu thích</a></li>
+                        <li><a href="#">Đăng ký</a></li>
+                        <li><a href="#">Đăng nhập</a></li>
+                    </ul>
+                </div>
+    
+                <div class="search">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button onclick="searchFunction()">🔍</button>
+                </div>
+            </nav>
+            <script>
+                function searchFunction() {
+                    let query = document.getElementById("searchInput").value;
+                    alert("You searched for: " + query);
+                }
+            </script>
         </header>
         <main id="main">
             <article class="article__book-tour">
@@ -139,7 +168,52 @@
             
         </main>
         <footer>
-
+            <div class="footer-container">
+                <div class="footer-section logo-section">
+                    <h2><i class="fas fa-gem"></i> FOUR TRAVEL</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec diam vel nulla tincidunt sagittis.</p>
+                </div>
+        
+                <div class="footer-section">
+                    <h3>Đội nhóm</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-section">
+                    <h3>Điểm đến</h3>
+                    <ul>
+                        <li><a href="#">Cần Thơ </a></li>
+                        <li><a href="#">Asia</a></li>
+                        <li><a href="#">Europe</a></li>
+                        <li><a href="#">Canada</a></li>
+                        <li><a href="#">South America</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-section">
+                    <h3>Hỗ trợ</h3>
+                    <ul>
+                        <li><a href="#">Trước khi đặt lịch</a></li>
+                        <li><a href="#">Trước chuyến đi</a></li>
+                        <li><a href="#">Trong chuyến đi</a></li>
+                        <li><a href="#">Vấn đề phát sinh</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-section social">
+                    <h3>Liên hệ với chúng tôi qua</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i><img src="/Img/ig.png"> </a>
+                        <a href="#"><i class="fab fa-twitter"></i><img src="/Img/tw.png"> </a>
+                        <a href="#"><i class="fab fa-facebook"></i><img src="/Img/fb.png"> </a>
+                    </div>
+                </div>
+            </div>
         </footer>
         <script src="/product-detail_script.js"></script>
     </body>

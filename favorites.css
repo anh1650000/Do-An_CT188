@@ -11,6 +11,13 @@ body {
 body {
     padding-top: 80px; 
 }
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 200px; /* Đẩy nội dung xuống xa hơn khi header xếp dọc */
+    }
+}
+
 header {
     position: fixed;
     top: 0;

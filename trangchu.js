@@ -6,13 +6,13 @@ products.forEach(product => {
     productDiv.classList.add("product");
     
     // Giả sử mỗi sản phẩm có một trang chi tiết riêng theo product.pId
-    const productUrl = `/product-detail.html?id=${product.pId}`;
+    const productUrl = `/product-detail.html?product-id=${product.pId}`;
 
     productDiv.innerHTML = `
-        <img src="${product.images[0]}" alt="${product.name}">
+        <img class="product-img" src="${product.images[0]}" alt="${product.name}">
         <h3>${product.name}</h3>
-        <p>${product.price.toLocaleString()} VND</p>
-        <a class="buy" href="${productUrl}">Xem ngay</a>
+        <p>Chỉ từ: ${product.price.toLocaleString()} VND</p>
+        <a class="buy" href="${productUrl}">Đặt lịch ngay</a>
     `;
 
     productList.appendChild(productDiv);
