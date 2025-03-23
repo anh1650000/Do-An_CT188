@@ -1,32 +1,44 @@
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 body {
     background: url(/Img/background.jpg) no-repeat center center/cover;
     height: 100vh;
-
-    color: white;
+    color: #dadada;
 }
+
 header {
-    position: absolute;
+    /* position: sticky;
     top: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 20px 50px;
     background: rgba(0, 0, 0, 0.5);
+    align-items: center; */
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: #0e1c24;
     align-items: center;
+    box-sizing: border-box;
+    z-index: 1000;
 }
+
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    position: sticky;
-    top: 0;
+    
 }
 .logo {
     font-size: 24px;
@@ -53,13 +65,13 @@ nav {
     margin: 0 15px;
 }
 .menu li a {
-    color: white;
+    color: #dadada;
     text-decoration: none;
     transition: 0.3s;
     padding: 5px 10px;
 }
 .menu li a:hover {
-    color: lightblue;
+    color: #3a4d54;
 }
 
 
@@ -67,12 +79,13 @@ nav {
     position: relative;
     display: none;
 }
+
 .dropdown-menu {
     font-size: 24px;
     cursor: pointer;
     background: none;
     border: none;
-    color: white;
+    color: #dadada;
     padding: 5px;
 }
 .dropdown-content {
@@ -80,7 +93,7 @@ nav {
     position: absolute;
     top: 40px;
     right: 0;
-    background: #07326E;
+    background: #3a4d54;
     width: 150px;
     text-align: left;
 }
@@ -88,14 +101,15 @@ nav {
     list-style: none;
 }
 .dropdown-content a {
-    color: white;
+    color: #dadada;
     padding: 10px;
     display: block;
     text-decoration: none;
 }
 .dropdown-content a:hover {
-    background-color: lightblue;
+    background-color: #3a4d54;
 }
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -127,10 +141,11 @@ nav {
 
 .hero {
     position: relative;
-    height: 100vh;
+    width: 500px;
+    height: 90vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     text-align: center;
     animation: fadeIn 2s;
     margin: 2%;
@@ -138,38 +153,85 @@ nav {
 h1 {
     font-size: 48px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 35%;
+    left: 33%;
     transform: translate(-50%, -50%);
 }
-.div-tag1, .div-tag2, .div-tag3 {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+.div__products {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    justify-content: center;
     gap:15px;
     padding: 2%;
 }
-.tag {
+.product {
     flex: 1 1 calc(33% - 10px);
     border: 1px solid #436CA4;
     box-sizing: border-box;
-    max-width: 33%;
 }
-.tag:hover {
+.product:hover {
     border: 1px solid #436CA4;
 }
-.tag img {
+.product img {
     width: 100%;
     height: auto;
+}
+.product h3 {
+    font-size:2vw;
+    color: #07120E;
+}
+.product p {
+    float:right;
+    color: #07120E;
+    font-size:2vw;
+}
+.buy {
+    font-size:2vw;
+    text-decoration: none;
+    color:#000080;
 }
 .desc {
     padding: 15px;
     text-align:center;
 }
 
+/* review */
+.review {
+    column-count: 2;
+    padding: 50px;
+}
+.review a {
+    flex-shrink: 0;
+}
+.review  img {
+    width:70%;
+    height:auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.review h2 {
+    font-size: 4vw;
+    color:#07120E;
+    padding: 10px;
+    text-align: center;
+}
+.review h2:hover {
+    transform: skew(25deg);
+    background: linear-gradient(to right, #000080, #00FFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.review p {
+    color:#07120E;
+    font-size: 2.5vw;
+}
+.review div{
+    
+}
 footer {
     background-color: #07120E; /* Màu nền tối */
-    color: white;
+    color: #dadada;
     padding: 40px 80px;
 }
 
@@ -221,7 +283,7 @@ footer {
 
 .social-icons a {
     font-size: 20px;
-    color: white;
+    color: #dadada;
     margin-right: 15px;
     transition: 0.3s;
 }

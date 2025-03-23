@@ -4,27 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="trangchu.css">
+    <link rel="stylesheet" href="/trangchu.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Four<span>Travel</span><img id="fourtravel" src="/img/logo.png"> </div>
+            <div onclick="window.location.href='/trangchu.html'" class="logo">Four<span>Travel</span><img id="fourtravel" src="/Img/logo.png" style="cursor: pointer;"> </div>
             <ul class="menu">
                 <li><a href="/trangchu.html">Trang chủ</a></li>
-                <li><a href="#">Giỏ hàng</a></li>
-                <li><a href="#">Đăng ký</a></li>
-                <li><a href="#">Đăng nhập</a></li>
+                <li><a href="/favorites.html">Yêu thích</a></li>
+                <li id="auth-links"></li>
             </ul>
 
             <div class="dropdown">
                 <button class="dropdown-menu">☰</button>
                 <ul class="dropdown-content">
                     <li><a href="/trangchu.html">Trang chủ</a></li>
-                    <li><a href="#">Giỏ hàng</a></li>
-                    <li><a href="#">Đăng ký</a></li>
-                    <li><a href="#">Đăng nhập</a></li>
+                    <li><a href="/favorites.html">Yêu thích</a></li>
+                    <li id="auth-links"></li>
                 </ul>
             </div>
 
@@ -47,71 +44,18 @@
             </div>
         </section>
 
-        <div class="div-tag1">          
-            <div class="tag">
-                <a target="_blank" href="/image/tag1.jpg">
-                    <img src="/image/tag1.jpg" alt="Tag1" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-            </div>
-
-            <div class="tag">
-                <a target="_blank" href="/image/tag2.jpg">
-                    <img src="/image/tag2.jpg" alt="Tag2" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-            </div>
-
-            <div class="tag">
-                <a target="_blank" href="/image/tag3.jpg">
-                    <img src="/image/tag3.jpg" alt="Tag3" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
+        <div class="div__products-container"> 
+            <div class="div__products" id="product-list">
+                
             </div>
         </div>
-
-        <div class="div-tag2">
-            <div class="tag">
-                <a target="_blank" href="/image/tag4.jpg">
-                    <img src="/image/tag4.jpg" alt="Tag4" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
+        <article class="review">
+            <a><img src="/Img/trangchu/review.png"> </a>
+            <div>
+            <h2>GIỚI THIỆU</h2>
+            <p>FourTravel là nền tảng trực tuyến giúp bạn dễ dàng tìm kiếm, lên kế hoạch và đặt tour du lịch đến những địa điểm tuyệt đẹp trên thế giới. Chúng tôi mang đến trải nghiệm du lịch an toàn, tiện lợi và tiết kiệm, giúp bạn tận hưởng kỳ nghỉ tuyệt vời mà không cần lo lắng về việc tổ chức. </p>
             </div>
-            <div class="tag">
-                <a target="_blank" href="/image/tag4.jpg">
-                    <img src="/image/tag4.jpg" alt="Tag4" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-            </div>
-            <div class="tag">
-                <a target="_blank" href="/image/tag4.jpg">
-                    <img src="/image/tag4.jpg" alt="Tag4" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-            </div>
-        </div>
-
-        <div class="div-tag3">
-            <div class="tag">
-                <a target="_blank" href="/image/tag4.jpg">
-                    <img src="/image/tag4.jpg" alt="Tag4" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-            </div>
-            <div class="tag">
-                <a target="_blank" href="/image/tag4.jpg">
-                    <img src="/image/tag4.jpg" alt="Tag4" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-            </div>
-            <div class="tag">
-                <a target="_blank" href="/image/tag4.jpg">
-                    <img src="/image/tag4.jpg" alt="Tag4" width="600" height="400">
-                </a>
-                <div class="desc">Add a description of the image here</div>
-            </div>
-        </div>
-
+        </article>
     </main>
 
     <footer>
@@ -155,13 +99,15 @@
             <div class="footer-section social">
                 <h3>Liên hệ với chúng tôi qua</h3>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-instagram"></i><img src="/image/ig.png"> </a>
-                    <a href="#"><i class="fab fa-twitter"></i><img src="/image/tw.png"> </a>
-                    <a href="#"><i class="fab fa-facebook"></i><img src="/image/fb.png"> </a>
+                    <a href="#"><i class="fab fa-instagram"></i><img src="/Img/ig.png"> </a>
+                    <a href="#"><i class="fab fa-twitter"></i><img src="/Img/tw.png"> </a>
+                    <a href="#"><i class="fab fa-facebook"></i><img src="/Img/fb.png"> </a>
                 </div>
             </div>
         </div>
     </footer>
-    
+    <script src="/user.js"></script>
+    <script src="product-detail_script.js"></script>
+    <script src="trangchu.js"></script>
 </body>
 </html>

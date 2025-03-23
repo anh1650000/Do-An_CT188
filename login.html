@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Nhập</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Four<span>Travel</span><img id="fourtravel" src="/img/logo.png"></div>
+        <ul class="menu">
+          <li><a href="/trangchu.html">Trang chủ</a></li>           
+          <li><a href="/favorites.html">Yêu Thích</a></li>
+          <li id="auth-links"></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form id="login-form">
+        <h3>ĐĂNG NHẬP</h3>
+
+        <label for="phone">Số điện thoại:</label>
+        <input type="text" id="phone" name="phone" required />
+
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="submit">Đăng nhập</button>
+
+        <div class="social-icons">
+          <img src="/Img/facebook (1).png" alt="Facebook" />
+          <img src="/Img/instagram.png" alt="Instagram" />
+          <img src="/Img/google.png" alt="Google" />
+        </div>
+      </form>
+      <a class="register-link" href="/register.html">Chưa có tài khoản? Đăng ký</a>
+    </main>
+
+    <script src="/user.js"></script>
+  </body>
+</html>

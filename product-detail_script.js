@@ -1072,12 +1072,25 @@ function pre_processAddToFavorite(){
 }
 
 
-onload = function(){
+// onload = function(){
+//     calculateEachPrice("adults");
+//     calculateTotalPrice();
+// }
+
+window.onload = function () {
+    if(window.innerWidth > 520){
+        const totalHeight = document.querySelector("header").offsetHeight + document.querySelector(".product-title").offsetHeight;
+        const bookTour = document.querySelector(".article__book-tour");
+        if (bookTour) {
+            bookTour.style.marginTop = `${totalHeight -22}px`;
+        }
+    } else{
+        document.querySelector(".article__book-tour").style.marginTop = "0";
+        document.querySelector(".article__schedule-container").style.margin = "100px 20px 50px 20px";
+    }
     calculateEachPrice("adults");
     calculateTotalPrice();
 }
-
-
 
 document.getElementById("button__favorite").addEventListener("click", addToFavorite);
 
@@ -1088,6 +1101,13 @@ function getProductIdFromURL() {
 }
 
 function addToFavorite() {
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+    if (!currentUser) {
+        alert("Bạn chưa đăng nhập! Vui lòng đăng nhập để thêm vào yêu thích.");
+        window.location.href = "/login.html"; 
+        return;
+    }
     let tourId = getProductIdFromURL();
     
     if (!tourId) {
