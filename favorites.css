@@ -86,7 +86,7 @@ td img {
     border-radius: 5px;
 }
 
-/* Nút Xóa */
+
 button {
     background: #ff4d4d;
     color: white;
@@ -99,7 +99,13 @@ button {
 button:hover {
     background: #cc0000;
 }
+.bt-book {
+    background: #007bff; 
+}
 
+.bt-book:hover {
+    background: #0056b3;
+}
 /* Responsive cho mobile */
 @media (max-width: 768px) {
     header {
