@@ -11,8 +11,6 @@ body {
     background-color: #0e1c24;
     color: #dadada;
     box-sizing: border-box;
-    /* margin: 0 10px 0 10px;
-    padding: 5px 10px 5px 10px; */
 }
 
 h1{
@@ -58,7 +56,6 @@ p{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* margin: 5px 0 10px 0; */
 }
 
 .section__total-price {
@@ -84,7 +81,6 @@ p{
     box-sizing: border-box;
 }
 .quantity-results {
-    /* color: #0e1c24; */
     font-size: 1em;
     font-weight: 320;
     margin: 0 10px;
@@ -95,7 +91,6 @@ p{
 
 .btn {
     background-color: initial;
-    /* color: #021520; */
     color: #dadada;
     font-size: 1em;
     font-weight: 500;
@@ -105,7 +100,7 @@ p{
 }
 
 .btn:hover {
-    color:#153d55;
+    color:#ffffff93;
     transform: scale(1.2);
 }
 
@@ -140,7 +135,6 @@ p{
 .section__total-price > span{
     font-size: 1.2em;
     font-weight: 600;
-    /* color: #aa6715; */
 }
 
 .section__favorite-or-book {
@@ -149,7 +143,6 @@ p{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* padding: 15px 10px; */
     font-size: 1.1em;
     font-weight: 600;
 }
@@ -214,13 +207,14 @@ p{
     position: absolute;
     top: 45%;
     width: auto;
-    padding: 12px;
+    padding: 7.5px 15px;
     margin-top: -50px;
     color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 1.2em;
     border-radius: 5px;
     user-select: none;
+    background-color: rgba(59, 49, 49, 0.67);
 }
 
 .next-button {
@@ -236,7 +230,7 @@ p{
 }
 
 .previous-button:hover, .next-button:hover {
-    background-color: rgba(59, 49, 49, 0.67);
+    background-color: rgba(119, 119, 119, 0.5);
 }
 
 .number-img {
@@ -250,13 +244,9 @@ p{
 .img-minimap__row{
     display: flex;
     flex-direction: row;
-    /* justify-content: center;
-    align-items: center; */
     margin: 10px 0;
     max-width: 760px;
-    /* display: inline; */
     flex-wrap: nowrap;
-    /* flex-grow: 0; */
 }
 
 .img-minimap__column {

@@ -905,11 +905,18 @@ if(products[productId] != null){
     // slide show hình ảnh
     const imageContainer = document.getElementById("image-container");
     for(let i = 0; i < products[productId].images.length; i++)
-        imageContainer.innerHTML += "<div class='slideshow-product--img'><div class='number-img'>" + (i + 1) + " / " + products[productId].images.length + "</div><img id='product-image-"+(i+1)+"' class='product-image' src='" + products[productId].images[i] + "'style='width:100%';></div>";
+        imageContainer.innerHTML += `
+            <div class="slideshow-product--img">
+                <div class="number-img"> ${i + 1}/${products[productId].images.length}</div>
+                <img id="product-image-${i + 1}" 
+                    class="product-image" 
+                    src="${products[productId].images[i]}" 
+                    style="width:100%";> 
+            </div>`;
 
     imageContainer.innerHTML += 
-        `<a class="previous-button" onclick="changeSlideshow(${-1})">pre</a>
-        <a class="next-button" onclick="changeSlideshow(${1})">next</a>`
+        `<a class="previous-button" onclick="changeSlideshow(${-1})"><</a>
+        <a class="next-button" onclick="changeSlideshow(${1})">></a>`
     
     // minimap hình ảnh
     imageContainer.innerHTML += "<div class='img-minimap__row' id='img-minimap__row'></div>"
@@ -1062,14 +1069,14 @@ function calculateEachPrice(typeOfPerson){
     }, 700)
 }
 
-function pre_processAddToFavorite(){
-    adultQuantity = parseInt(document.getElementById("adults").textContent)
-    childQuantity = parseInt(document.getElementById("childrens").textContent)
-    itfantQuantity = parseInt(document.getElementById("infants").textContent)
-    priceDefault = products[productId].price
-    let totalPrice = adultQuantity * priceDefault + (childQuantity * priceDefault * 0.5) + (itfantQuantity * priceDefault * 0.3)
-    js2(productId, adultQuantity, childQuantity, itfantQuantity, totalPrice)
-}
+// function pre_processAddToFavorite(){
+//     adultQuantity = parseInt(document.getElementById("adults").textContent)
+//     childQuantity = parseInt(document.getElementById("childrens").textContent)
+//     itfantQuantity = parseInt(document.getElementById("infants").textContent)
+//     priceDefault = products[productId].price
+//     let totalPrice = adultQuantity * priceDefault + (childQuantity * priceDefault * 0.5) + (itfantQuantity * priceDefault * 0.3)
+//     js2(productId, adultQuantity, childQuantity, itfantQuantity, totalPrice)
+// }
 
 
 // onload = function(){
@@ -1142,4 +1149,14 @@ function addToFavorite() {
     }
 
     localStorage.setItem("favoriteTours", JSON.stringify(favorites));
+}
+
+function pre_processBookTour(){
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (!currentUser) {
+        alert("Bạn chưa đăng nhập! Vui lòng đăng nhập để đặt tour.");
+        window.location.href = "/login.html"; 
+        return;
+    }
+    bookTour(productId, "product-detail");
 }
