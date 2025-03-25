@@ -14,6 +14,7 @@ function register(event) {
     event.preventDefault();
     const fullname = document.getElementById("fullname").value;
     const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     const confirmPassword = document.getElementById("confirm-password").value;
 
@@ -30,7 +31,7 @@ function register(event) {
         return;
     }
 
-    let newUser = { fullname, phone, password };
+    let newUser = { fullname, phone, email, password };
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
     alert("Đăng ký thành công! Vui lòng đăng nhập.");

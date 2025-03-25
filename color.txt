@@ -1,0 +1,9 @@
+background-color: #0e1c24;
+ color: #dadada;
+     color:#153d55;
+  background-color: #20272a;
+      background-color: #162630;
+    background-color: #3a4d54;
+    background-color: #0e343f9a;
+    background-color: #07120E;
+    background-color: #3a4d54;

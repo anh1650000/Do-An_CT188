@@ -1,0 +1,147 @@
+.petrona-font {
+    font-family: "Petrona", serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+}
+
+body {
+    font-family: "Petrona", sans-serif;
+    font-size: 18px;
+    background-color: #0e1c24;
+    color: #dadada;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 1.6em;
+    font-weight: 5750;
+}
+
+h2{
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+p{
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.article-reply{
+    width: 800px;
+    height: 92vh;
+    margin: 50px auto;
+    padding: 5px 10px 5px 10px;
+    background-color: #1f2d35;
+    border-radius: 25px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.section__reply--detail{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.div-details{
+    display: flex;
+    flex-direction: column;
+    background-color: #3a4d5497;
+    border-radius: 15px;
+}
+
+.div-details p{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #20272a6a;
+}
+
+.div-details h2{
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 525;
+}
+    
+.booking__description{
+    display: flex;
+    margin: 5px 10px 10px 10px;
+}
+
+.user-details{
+    display: flex;
+    flex-direction: column;
+    margin: 2.5%;
+    width: 45%;
+}
+
+.tour-details{
+    width: 52.5%;
+}
+
+.span-title-p{
+    margin-right: 5px;
+    width: 90%;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.section__waring{
+    text-align: right;
+    margin: 10px;
+    padding: 10px;
+    color: rgba(255, 45, 8, 0.9);
+    a{
+        margin-top: 10px;
+        font-size: 1.1em;
+        margin-top: 20px;
+        color: #ffffff;
+        font-weight: 200;
+    }
+    p{
+        margin: 5px;
+        font-size: 1.1em;
+    }
+}
+
+.reply-title{
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: 600;
+    margin: 20px 10px;
+
+}
+
+.reply-description{
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 500px){
+    .article-reply{
+        width: 95%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .section__reply--detail{
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .div-details{
+        width: 100%;
+    }
+    
+}
