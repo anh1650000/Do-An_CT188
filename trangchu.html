@@ -11,7 +11,7 @@
         <nav>
             <div onclick="window.location.href='/trangchu.html'" class="logo">Four<span>Travel</span><img id="fourtravel" src="/Img/logo.png" style="cursor: pointer;"> </div>
             <ul class="menu">
-                <li><a href="/trangchu.html">Trang chủ</a></li>
+                <li><a id="current" href="/trangchu.html">Trang chủ</a></li>
                 <li><a href="/favorites.html">Yêu thích</a></li>
                 <li id="auth-links"></li>
             </ul>
@@ -25,10 +25,11 @@
                 </ul>
             </div>
 
-            <div class="search">
+            <!-- <div class="search">
                 <input type="text" id="searchInput" placeholder="Search...">
                 <button onclick="searchFunction()">🔍</button>
-            </div>
+            </div> -->
+            
         </nav>
         <script>
             function searchFunction() {
