@@ -1101,6 +1101,13 @@ function getProductIdFromURL() {
 }
 
 function addToFavorite() {
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+    if (!currentUser) {
+        alert("Bạn chưa đăng nhập! Vui lòng đăng nhập để thêm vào yêu thích.");
+        window.location.href = "/login.html"; 
+        return;
+    }
     let tourId = getProductIdFromURL();
     
     if (!tourId) {

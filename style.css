@@ -1,0 +1,199 @@
+
+body {
+  font-family: "Petrona", sans-serif;
+  font-size: 18px;
+  background-color: #0e1c24;
+  color: #dadada;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+body {
+  padding-top: 100px; 
+}
+@media (max-width: 768px) {
+  body {
+      padding-top: 200px; /* Đẩy nội dung xuống xa hơn khi header xếp dọc */
+  }
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 50px;
+  background: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  z-index: 1000;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.logo span {
+  color: lightblue;
+}
+.logo img {
+  width: 50px;
+  margin-left: 10px;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+}
+.menu li {
+  margin: 0 15px;
+}
+.menu li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  padding: 5px 10px;
+}
+.menu li a:hover {
+  color: lightblue;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+form {
+  background: white;
+  color: black;
+  padding: 20px 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+form h2 {
+  color: black; /* màu chữ đăng nhập, đăng ký */
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: left;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background: #28a745; /* Màu xanh của nút */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #218838; /* Màu khi hover */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.register-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+
+/*nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding: 2rem;
+}
+
+button {
+  background: #5391ee;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+                code mới
+form {
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+form h2 {
+  text-align: center;
+  color: #333;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+} */

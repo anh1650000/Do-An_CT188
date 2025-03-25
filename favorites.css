@@ -11,13 +11,11 @@ body {
 body {
     padding-top: 80px; 
 }
-
 @media (max-width: 768px) {
     body {
         padding-top: 200px; /* Đẩy nội dung xuống xa hơn khi header xếp dọc */
     }
 }
-
 header {
     position: fixed;
     top: 0;
@@ -88,7 +86,7 @@ td img {
     border-radius: 5px;
 }
 
-/* Nút Xóa */
+
 button {
     background: #ff4d4d;
     color: white;
@@ -101,7 +99,13 @@ button {
 button:hover {
     background: #cc0000;
 }
+.bt-book {
+    background: #007bff; 
+}
 
+.bt-book:hover {
+    background: #0056b3;
+}
 /* Responsive cho mobile */
 @media (max-width: 768px) {
     header {

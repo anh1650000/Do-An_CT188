@@ -295,6 +295,10 @@ footer {
     color: #B0B0B0;
 }
 
+#current{
+    /* color: #3a4d54; */
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .footer-container {

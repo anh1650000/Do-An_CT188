@@ -26,7 +26,10 @@ function renderFavorites() {
             <td>${tour.children}</td>
             <td>${tour.infants}</td>
             <td>${tour.totalPrice.toLocaleString()} VND</td>
-            <td><button onclick="removeFavorite('${tour.pId}')">Xóa</button></td>
+            <td><button class ="bt-book" onclick="bookTour('${tour.pId}')">Đặt</button> 
+                <button onclick="removeFavorite('${tour.pId}')">Xóa</button>
+            </td>
+
         `;
 
         fragment.appendChild(row);
@@ -55,5 +58,31 @@ window.addEventListener("storage", (event) => {
     }
 });
 
+function bookTour(id) {
+    let isConfirmed = confirm("Bạn có chắc chắn muốn đặt tour này không?");
+    if (!isConfirmed) return;
+
+    let favoriteTours = JSON.parse(localStorage.getItem("favoriteTours")) || [];
+    let selectedTour = favoriteTours.find(tour => tour.pId === id);
+
+    if (!selectedTour) {
+        alert("Tour không tồn tại!");
+        return;
+    }
+    let loggedInUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (!loggedInUser) {
+        alert("Bạn cần đăng nhập để đặt lịch!");
+        return;
+    }
+
+    let bookingInfo = {
+        tour: selectedTour,
+        user: loggedInUser
+    };
+
+    localStorage.setItem("bookingInfo", JSON.stringify(bookingInfo));
+
+    window.location.href = "reply-customer.html";
+}
 
 

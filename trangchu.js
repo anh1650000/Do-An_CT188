@@ -29,3 +29,4 @@ products.forEach(product => {
 function buyProduct(productId) {
     alert(`Bạn đã chọn mua tour có ID: ${productId}`);
 }
+
