@@ -9,9 +9,14 @@
 <body>
     <header>
         <nav>
-            <div onclick="window.location.href='/trangchu.html'" class="logo">Four<span>Travel</span><img id="fourtravel" src="/Img/logo.png" style="cursor: pointer;"> </div>
+            <div onclick="window.location.href='/trangchu.html'" class="logo">
+                Four<span>Travel</span>
+                <img id="fourtravel" src="/Img/logo.png" style="cursor: pointer;"> <!-- Từ file `trangchu.html` -->
+                <!-- <img id="fourtravel" src="/Img/trangchu/logo.png" style="cursor: pointer;"> --> <!-- Từ file `trangchu (1).html` -->
+            </div>
             <ul class="menu">
-                <li><a id="current" href="/trangchu.html">Trang chủ</a></li>
+                <!-- <li><a id="current" href="/trangchu.html">Trang chủ</a></li> Từ file `trangchu.html` -->
+                <li><a href="/trangchu.html" id="font-main">Trang chủ</a></li> <!-- Từ file `trangchu (1).html` -->
                 <li><a href="/favorites.html">Yêu thích</a></li>
                 <li id="auth-links"></li>
             </ul>
@@ -24,12 +29,6 @@
                     <li id="auth-links"></li>
                 </ul>
             </div>
-
-            <!-- <div class="search">
-                <input type="text" id="searchInput" placeholder="Search...">
-                <button onclick="searchFunction()">🔍</button>
-            </div> -->
-            
         </nav>
         <script>
             function searchFunction() {
@@ -43,18 +42,26 @@
             <div class="content">
                 <h1>Travel to the Most Amazing Places on the Planet</h1>
             </div>
+            <!-- Phần này chỉ có trong `trangchu (1).html` -->
+            <div class="tour-info">
+                <div class="circle-img"></div>
+                <h3>UPCOMING TOUR</h3>
+                <p>Hạ Long<br>2 Nov - 9 Nov, 2025</p>
+                <a href="/product-detail.html?product-id=8">Đặt lịch ngay</a>
+            </div>
         </section>
 
         <div class="div__products-container"> 
             <div class="div__products" id="product-list">
-                
+                <!-- Nội dung sản phẩm -->
             </div>
         </div>
         <article class="review">
-            <a><img src="/Img/trangchu/review.png"> </a>
+            <!-- <a><img src="/Img/trangchu/review.jpg"> </a> Từ file `trangchu.html` -->
+            <a><img src="/Img/trangchu/review.jpg"></a>
             <div>
-            <h2>GIỚI THIỆU</h2>
-            <p>FourTravel là nền tảng trực tuyến giúp bạn dễ dàng tìm kiếm, lên kế hoạch và đặt tour du lịch đến những địa điểm tuyệt đẹp trên thế giới. Chúng tôi mang đến trải nghiệm du lịch an toàn, tiện lợi và tiết kiệm, giúp bạn tận hưởng kỳ nghỉ tuyệt vời mà không cần lo lắng về việc tổ chức. </p>
+                <h2>GIỚI THIỆU</h2>
+                <p>FourTravel là nền tảng trực tuyến giúp bạn dễ dàng tìm kiếm, lên kế hoạch và đặt tour du lịch đến những địa điểm tuyệt đẹp trên thế giới. Chúng tôi mang đến trải nghiệm du lịch an toàn, tiện lợi và tiết kiệm, giúp bạn tận hưởng kỳ nghỉ tuyệt vời mà không cần lo lắng về việc tổ chức.</p>
             </div>
         </article>
     </main>
@@ -100,9 +107,12 @@
             <div class="footer-section social">
                 <h3>Liên hệ với chúng tôi qua</h3>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-instagram"></i><img src="/Img/ig.png"> </a>
-                    <a href="#"><i class="fab fa-twitter"></i><img src="/Img/tw.png"> </a>
-                    <a href="#"><i class="fab fa-facebook"></i><img src="/Img/fb.png"> </a>
+                    <!-- <a href="#"><i class="fab fa-instagram"></i><img src="/Img/ig.png"> </a> Từ file `trangchu.html` -->
+                    <a href="#"><i class="fab fa-instagram"></i><img src="/Img/trangchu/instagram.png"> </a> <!-- Từ file `trangchu (1).html` -->
+                    <!-- <a href="#"><i class="fab fa-twitter"></i><img src="/Img/tw.png"> </a> Từ file `trangchu.html` -->
+                    <a href="#"><i class="fab fa-twitter"></i><img src="/Img/trangchu/Twitter.png"> </a> <!-- Từ file `trangchu (1).html` -->
+                    <!-- <a href="#"><i class="fab fa-facebook"></i><img src="/Img/fb.png"> </a> Từ file `trangchu.html` -->
+                    <a href="#"><i class="fab fa-facebook"></i><img src="/Img/trangchu/facebook.png"> </a> <!-- Từ file `trangchu (1).html` -->
                 </div>
             </div>
         </div>

@@ -1,11 +1,10 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
-    background: url(/Img/background.jpg) no-repeat center center/cover;
+    background: url(/Img/trangchu/background.jpeg) no-repeat center center/cover;
     height: 100vh;
     color: #dadada;
     background-color: #0e1c24;
@@ -29,7 +28,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 20px 50px;
-    background: #0e1c24;
+    background: rgba(0,0,0,0.5);
     align-items: center;
     box-sizing: border-box;
     z-index: 1000;
@@ -63,6 +62,7 @@ nav {
     gap: 15px;
     padding: 0;
 }
+
 .menu li {
     margin: 0 15px;
 }
@@ -72,8 +72,17 @@ nav {
     transition: 0.3s;
     padding: 5px 10px;
 }
+#font-main {
+    color: lightblue;
+    border-bottom: 1px;
+    border-bottom-style: solid ;  
+    border-color: #ffffff;  
+}
 .menu li a:hover {
-    color: #3a4d54;
+    color:lightblue;
+    border-bottom-style: solid ;  
+    border-color: #ffffff;  
+    border-width: 1px;
 }
 
 
@@ -89,6 +98,8 @@ nav {
     border: none;
     color: #dadada;
     padding: 5px;
+    /* left: 0; */
+    /* margin-left: 0; */
 }
 .dropdown-content {
     display: none;
@@ -96,13 +107,17 @@ nav {
     top: 40px;
     right: 0;
     background: #162630;
-    width: 150px;
+    width: 165px;
     text-align: left;
+    box-sizing: border-box;
 }
 .dropdown-content li {
+    left: 0;
     list-style: none;
 }
 .dropdown-content a {
+    /* left: 0; */
+    margin: 0 25px 0 0;
     color: #dadada;
     padding: 10px;
     display: block;
@@ -116,7 +131,7 @@ nav {
     display: block;
 }
 
-
+/*
 .search {
     flex-shrink: 0;
     display: flex;
@@ -140,43 +155,47 @@ nav {
     font-size: 16px;
     padding: 5px;
 }
-
+*/
 .hero {
-    position: relative;
-    width: 500px;
     height: 90vh;
     display: flex;
     align-items: center;
-    justify-content: left;
-    text-align: center;
+    text-align: left;
     animation: fadeIn 2s;
     margin: 2%;
 }
-h1 {
-    font-size: 48px;
-    position: absolute;
-    top: 35%;
-    left: 33%;
-    transform: translate(-50%, -50%);
+.content {
+    width: 500px;
+    font-size: 38px;
+    transform:translateY(-40%);
 }
+.content h1 {
+    font-family: 'Playfair Display',serif;
+}
+
 .div__products {
+    margin:20px;
     display: grid;
     grid-template-columns:repeat(3, 1fr);
-    justify-content: center;
-    gap:15px;
-    padding: 2%;
+    justify-items: center;
+    gap:3vw;
+    padding: 4%;
+    row-gap: 4vw;
 }
 .product {
-    flex: 1 1 calc(33% - 10px);
-    border: 1px solid #436CA4;
+    width: 90%;
+    border-radius: 8px;
+    /* border: 1px solid #436CA4; */
     box-sizing: border-box;
+    background-color:#3a4d54f5;
 }
 .product:hover {
     border: 1px solid #436CA4;
 }
 .product img {
+    border-radius: 8px;
     width: 100%;
-    height: auto;
+    height: 200px;
 }
 .product h3 {
     font-size:2vw;
@@ -185,10 +204,12 @@ h1 {
 .product p {
     float:right;
     /* color: #07120E; */
-    font-size:2vw;
+    font-size:1.8vw;
 }
 .buy {
-    font-size:2vw;
+    
+    white-space: nowrap;
+    font-size:2.2vw;
     font-weight: bold;
     text-decoration: none;
     color:#dadada;
@@ -222,7 +243,7 @@ h1 {
 .review h2:hover {
     transform: skew(25deg);
     background: linear-gradient(to right, #000080, #00FFFF);
-    /* -webkit-background-clip: text; */
+    -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;
 }
 .review p {
@@ -295,22 +316,7 @@ footer {
     color: #B0B0B0;
 }
 
-#current{
-    /* color: #3a4d54; */
-}
-
 /* Responsive */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .social-icons {
-        display: flex;
-        justify-content: center;
-    }
-}
 
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -320,7 +326,110 @@ footer {
     .menu {
         display: none;
     }
+    .tour-info {
+        display: none;
+    }
     .dropdown {
         display: block;
     }
+    .div__products {
+        display: grid;
+        grid-template-columns:repeat(2, 1fr);
+        justify-content: center;
+        gap:20px;
+        padding: 3%;
+        row-gap: 30px;
+    }
+    
+    .product img {
+        border-radius: 8px;
+        width: 100%;
+        height: 150px;
+    }
+    .product h3 {
+        font-size:2.8vw;
+        color: #dadada;
+    }
+    .product p {
+        float:right;
+        /* color: #07120E; */
+        font-size:2vw;
+    }
+    .buy {
+        white-space: nowrap;
+        font-size:2.5vw;
+        font-weight: bold;
+        text-decoration: none;
+        color:#dadada;
+    }
+}
+@media (max-width: 420px) {
+    .tour-info {
+        display: none;
+    }
+    .div__products {
+        display: grid;
+        grid-template-columns:repeat(1, 1fr);
+        justify-content: center;
+        gap:25px;
+        padding: 3%;
+    }
+    .product img {
+        border-radius: 8px;
+        width: 100%;
+        height: 150px;
+    }
+    .product h3 {
+        font-size:3vw;
+        color: #dadada;
+    }
+    .product p {
+        float:right;
+        /* color: #07120E; */
+        font-size:2.2vw;
+    }
+    .buy {
+        white-space: nowrap;
+        font-size:2.5vw;
+        font-weight: bold;
+        text-decoration: none;
+        color:#dadada;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-section {
+        text-align: center;
+    }
+    .social-icons {
+        display: flex;
+        justify-content: center;
+    }
+    .review img {
+        display: none;
+    }
+    .review {
+        column-count: 1;
+        text-align: center;
+        padding: 30px 70px 30px 70px;
+    }
+}
+.tour-info {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.425);
+    padding: 20px;
+    border-radius: 10px;
+    transform: translate(200%,53%);
+    color:#010a17;
+}
+.circle-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+    background: url("/Img/Phu_Quoc/tour-cano-dao-phu-quoc-rooty-trip-14-01-1024x683.jpg") no-repeat center center/cover;
+    border-radius: 50%;
+    margin: 0 auto 10px10px;
 }
