@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         productDiv.innerHTML = `
             <img src="${product.images[0]}" alt="${product.name}">
             <h3>${productName}</h3>
-            <p>Chỉ từ:${product.price.toLocaleString()} VND</p>
+            <p>Chỉ từ: ${product.price.toLocaleString()} VND</p>
             <a class="buy" href="${productUrl}">Đặt lịch ngay</a>
         `;
     

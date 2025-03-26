@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title class="title__product--head"></title>
         <link rel="icon" href="" type="image/x-icon">
+        <link rel="stylesheet" href="/header-footer.css">
         <link rel="stylesheet" href="/product-detail_style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,9 +14,14 @@
     <body>
         <header>
             <nav>
-                <div onclick="window.location.href='/trangchu.html'" class="logo">Four<span>Travel</span><img id="fourtravel" src="/Img/logo.png" style="cursor: pointer;"> </div>
+                <div onclick="window.location.href='/trangchu.html'" class="logo">
+                    Four<span>Travel</span>
+                    <img id="fourtravel" src="/Img/logo.png" style="cursor: pointer;"> <!-- Từ file `trangchu.html` -->
+                    <!-- <img id="fourtravel" src="/Img/trangchu/logo.png" style="cursor: pointer;"> --> <!-- Từ file `trangchu (1).html` -->
+                </div>
                 <ul class="menu">
-                    <li><a href="/trangchu.html">Trang chủ</a></li>
+                    <!-- <li><a id="current" href="/trangchu.html">Trang chủ</a></li> Từ file `trangchu.html` -->
+                    <li><a href="/trangchu.html">Trang chủ</a></li> <!-- Từ file `trangchu (1).html` -->
                     <li><a href="/favorites.html">Yêu thích</a></li>
                     <li id="auth-links"></li>
                 </ul>
@@ -27,11 +33,6 @@
                         <li><a href="/favorites.html">Yêu thích</a></li>
                         <li id="auth-links"></li>
                     </ul>
-                </div>
-    
-                <div class="search">
-                    <input type="text" id="searchInput" placeholder="Search...">
-                    <button onclick="searchFunction()">🔍</button>
                 </div>
             </nav>
             <script>
@@ -206,9 +207,12 @@
                 <div class="footer-section social">
                     <h3>Liên hệ với chúng tôi qua</h3>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-instagram"></i><img src="/Img/ig.png"> </a>
-                        <a href="#"><i class="fab fa-twitter"></i><img src="/Img/tw.png"> </a>
-                        <a href="#"><i class="fab fa-facebook"></i><img src="/Img/fb.png"> </a>
+                        <!-- <a href="#"><i class="fab fa-instagram"></i><img src="/Img/ig.png"> </a> Từ file `trangchu.html` -->
+                        <a href="#"><i class="fab fa-instagram"></i><img src="/Img/trangchu/instagram.png"> </a> <!-- Từ file `trangchu (1).html` -->
+                        <!-- <a href="#"><i class="fab fa-twitter"></i><img src="/Img/tw.png"> </a> Từ file `trangchu.html` -->
+                        <a href="#"><i class="fab fa-twitter"></i><img src="/Img/trangchu/Twitter.png"> </a> <!-- Từ file `trangchu (1).html` -->
+                        <!-- <a href="#"><i class="fab fa-facebook"></i><img src="/Img/fb.png"> </a> Từ file `trangchu.html` -->
+                        <a href="#"><i class="fab fa-facebook"></i><img src="/Img/trangchu/facebook.png"> </a> <!-- Từ file `trangchu (1).html` -->
                     </div>
                 </div>
             </div>

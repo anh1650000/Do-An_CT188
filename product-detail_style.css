@@ -6,11 +6,13 @@
 }
 
 body {
+    background: none;
     font-family: "Petrona", sans-serif;
     font-size: 18px;
-    background-color: #0e1c24;
+    background-color: #0e1c24 !important;
     color: #dadada;
     box-sizing: border-box;
+    margin: auto;
 }
 
 h1{
@@ -159,7 +161,7 @@ p{
 }
 
 .book-tour__select{
-    background-color: #dbdbdb;
+    background-color: #e5f3f8db;
     border: none;
     font-size: 0.9em;
     border-radius: 10px;
@@ -205,7 +207,7 @@ p{
 .previous-button, .next-button {
     cursor: pointer;
     position: absolute;
-    top: 45%;
+    top: 49%;
     width: auto;
     padding: 7.5px 15px;
     margin-top: -50px;
@@ -579,219 +581,5 @@ p{
         /* padding: 10px; */
         grid-column: 2/3;
         grid-row: 4/5;
-    }
-}
-
-
-/* #################### */
-/* header */
-header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    background: #0e1c24;
-    align-items: center;
-    box-sizing: border-box;
-    z-index: 1000;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    box-sizing: border-box;
-}
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-
-}
-.logo span {
-    color: lightblue;
-}
-.logo img{
-    width:20%;
-}
-.menu {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    padding: 0;
-}
-.menu li {
-    margin: 0 15px;
-}
-.menu li a {
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
-    padding: 5px 10px;
-}
-.menu li a:hover {
-    color: lightblue;
-}
-
-
-.dropdown {
-    position: relative;
-    display: none;
-}
-.dropdown-menu {
-    font-size: 24px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: white;
-    padding: 5px;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 40px;
-    right: 0;
-    background: #07326E;
-    width: 150px;
-    text-align: left;
-}
-.dropdown-content li {
-    list-style: none;
-}
-.dropdown-content a {
-    color: white;
-    padding: 10px;
-    display: block;
-    text-decoration: none;
-}
-.dropdown-content a:hover {
-    background-color: lightblue;
-}
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
-.search {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    background: white;
-    border-radius: 5px;
-    padding: 3px;
-    flex-wrap: nowrap;
-}
-.search input {
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    width: 120px;
-}
-.search button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 5px;
-}
-
-/* ################### */
-/* footer */
-footer {
-    background-color: #07120E; /* Màu nền tối */
-    color: white;
-    padding: 40px 80px;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 180px;
-    margin-bottom: 20px;
-}
-
-.logo-section h2 {
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.logo-section p {
-    font-size: 14px;
-    color: #B0B0B0;
-}
-
-.footer-section h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 8px;
-}
-
-.footer-section ul li a {
-    text-decoration: none;
-    color: #B0B0B0;
-    transition: 0.3s;
-}
-
-.footer-section ul li a:hover {
-    color: #ffffff;
-}
-
-.social-icons a {
-    font-size: 20px;
-    color: white;
-    margin-right: 15px;
-    transition: 0.3s;
-}
-
-.social-icons a:hover {
-    color: #B0B0B0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .social-icons {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-@media (max-width: 768px) {
-    .menu {
-        display: none;
-    }
-    .dropdown {
-        display: block;
     }
 }

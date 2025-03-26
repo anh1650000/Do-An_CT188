@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Website</title>
     <link rel="stylesheet" href="/trangchu.css">
+    <link rel="stylesheet" href="/header-footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -47,15 +51,9 @@
                 <div class="circle-img"></div>
                 <h3>UPCOMING TOUR</h3>
                 <p>Hạ Long<br>2 Nov - 9 Nov, 2025</p>
-                <a href="/product-detail.html?product-id=8">Đặt lịch ngay</a>
+                <a href="#product-list">Đặt lịch ngay</a>
             </div>
         </section>
-
-        <div class="div__products-container"> 
-            <div class="div__products" id="product-list">
-                <!-- Nội dung sản phẩm -->
-            </div>
-        </div>
         <article class="review">
             <!-- <a><img src="/Img/trangchu/review.jpg"> </a> Từ file `trangchu.html` -->
             <a><img src="/Img/trangchu/review.jpg"></a>
@@ -64,6 +62,13 @@
                 <p>FourTravel là nền tảng trực tuyến giúp bạn dễ dàng tìm kiếm, lên kế hoạch và đặt tour du lịch đến những địa điểm tuyệt đẹp trên thế giới. Chúng tôi mang đến trải nghiệm du lịch an toàn, tiện lợi và tiết kiệm, giúp bạn tận hưởng kỳ nghỉ tuyệt vời mà không cần lo lắng về việc tổ chức.</p>
             </div>
         </article>
+        <div class="div__products-container"> 
+            <h2 class="products-title">Các Tour Hiện Có</h2>
+            <div class="div__products" id="product-list">
+                <!-- Nội dung sản phẩm -->
+            </div>
+        </div>
+        
     </main>
 
     <footer>
@@ -118,7 +123,7 @@
         </div>
     </footer>
     <script src="/user.js"></script>
-    <script src="product-detail_script.js"></script>
-    <script src="trangchu.js"></script>
+    <script src="/product-detail_script.js"></script>
+    <script src="/trangchu.js"></script>
 </body>
 </html>

@@ -8,69 +8,26 @@ body {
     padding: 0;
     text-align: center;
 }
-body {
-    padding-top: 80px; 
-}
+
 @media (max-width: 768px) {
     body {
         padding-top: 200px; /* Đẩy nội dung xuống xa hơn khi header xếp dọc */
     }
 }
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 50px;
-    background: rgba(0, 0, 0, 0.7);
-    align-items: center;
-    z-index: 1000;
-}
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-}
-.logo span {
-    color: lightblue;
-}
-.logo img {
-    width: 50px;
-    margin-left: 10px;
-}
-.menu {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    padding: 0;
-}
-.menu li {
-    margin: 0 15px;
-}
-.menu li a {
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
-    padding: 5px 10px;
-}
-.menu li a:hover {
-    color: lightblue;
-}
 
 /* Tiêu đề */
 h1 {
-    margin-top: 150px;
+    margin-top: 10vh;
     font-size: 32px;
 }
-table {
+table { 
     width: 90%;
-    margin: 20px auto;
+    margin: 5vh auto;
     border-collapse: collapse;
     background: #1b2b34;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
+    margin-bottom: 100px;
 }
 th, td {
     border: 1px solid #2e3b44;
@@ -82,7 +39,7 @@ th {
     color: white;
 }
 td img {
-    width: 80px;
+    width: 20vh;
     border-radius: 5px;
 }
 
@@ -95,7 +52,12 @@ button {
     cursor: pointer;
     transition: 0.3s;
 }
-button:hover {
+
+.button{
+    background-color: #ff4d4d;
+}
+
+button:hover, .button:hover {
     background: #cc0000;
 }
 .bt-book {

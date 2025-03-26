@@ -2,66 +2,18 @@
 body {
   font-family: "Petrona", sans-serif;
   font-size: 18px;
-  /* background-color: #0e1c24; */
   background: url(/Img/background2.jpg) no-repeat center center/cover; /* Từ file after */
   color: #ffffff;
   margin: 0;
   padding: 0;
   text-align: center;
-  padding-top: 100px;
   box-sizing: border-box; 
 }
 
 @media (max-width: 768px) {
-  body {
+  main {
     padding-top: 200px; /* Đẩy nội dung xuống xa hơn khi header xếp dọc */
   }
-}
-
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 50px;
-  background-color: rgba(0, 0, 0, 0.3);
-  align-items: center;
-  z-index: 1000;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-}
-.logo span {
-  color: lightblue;
-}
-.logo img {
-  width: 50px;
-  margin-left: 10px;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  padding: 0;
-}
-.menu li {
-  margin: 0 15px;
-}
-.menu li a {
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
-  padding: 5px 10px;
-}
-.menu li a:hover {
-  color: lightblue;
 }
 
 main {
@@ -95,7 +47,6 @@ form label {
 }
 
 form input {
-  
   font-size: 1em;
   color: #ffffff;
   width: 93%;
@@ -104,10 +55,8 @@ form input {
   border: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 15px;
   border-radius: 10px;
-  background-color: #ffffff;
   box-shadow: 0 0 40px rgba(7, 7, 7, 0.6);
   background-color: rgba(196, 196, 196, 0.13);
-  /* margin-right: 40px; */
 }
 
 form button {
@@ -162,3 +111,18 @@ form button:hover {
   color: #07120E;
 }
 
+#font-main--log-in{
+  color: lightblue;
+  border-bottom: 1px;
+  border-bottom-style: solid ;  
+  border-color: #ffffff;  
+  margin-right: 5px;
+}
+
+#font-main--sign-up{
+  color: lightblue;
+  border-bottom: 1px;
+  border-bottom-style: solid ;  
+  border-color: #ffffff;  
+  margin-left: 5px;
+}

@@ -3,159 +3,26 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.petrona-font {
+    font-family: "Petrona", serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+}
+
 body {
-    background: url(/Img/trangchu/background.jpeg) no-repeat center center/cover;
+    font-family: "Petrona", sans-serif;
+    background: url(/Img/background2.jpg) no-repeat center center/cover;
     height: 100vh;
     color: #dadada;
     background-color: #0e1c24;
+    font-size: 18px;
 }
 
-header {
-    /* position: sticky;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    background: rgba(0, 0, 0, 0.5);
-    align-items: center; */
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 50px;
-    background: rgba(0,0,0,0.5);
-    align-items: center;
-    box-sizing: border-box;
-    z-index: 1000;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    
-}
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-
-}
-.logo span {
-    color: lightblue;
-}
-.logo img{
-    width:20%;
-}
-.menu {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    padding: 0;
-}
-
-.menu li {
-    margin: 0 15px;
-}
-.menu li a {
-    color: #dadada;
-    text-decoration: none;
-    transition: 0.3s;
-    padding: 5px 10px;
-}
-#font-main {
-    color: lightblue;
-    border-bottom: 1px;
-    border-bottom-style: solid ;  
-    border-color: #ffffff;  
-}
-.menu li a:hover {
-    color:lightblue;
-    border-bottom-style: solid ;  
-    border-color: #ffffff;  
-    border-width: 1px;
-}
-
-
-.dropdown {
-    position: relative;
-    display: none;
-}
-
-.dropdown-menu {
-    font-size: 24px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: #dadada;
-    padding: 5px;
-    /* left: 0; */
-    /* margin-left: 0; */
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 40px;
-    right: 0;
-    background: #162630;
-    width: 165px;
-    text-align: left;
-    box-sizing: border-box;
-}
-.dropdown-content li {
-    left: 0;
-    list-style: none;
-}
-.dropdown-content a {
-    /* left: 0; */
-    margin: 0 25px 0 0;
-    color: #dadada;
-    padding: 10px;
-    display: block;
-    text-decoration: none;
-}
-.dropdown-content a:hover {
-    background-color: #3a4d54;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/*
-.search {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    background: white;
-    border-radius: 5px;
-    padding: 3px;
-    flex-wrap: nowrap;
-}
-.search input {
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    width: 120px;
-}
-.search button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 5px;
-}
-*/
 .hero {
     height: 90vh;
     display: flex;
@@ -167,50 +34,92 @@ nav {
 .content {
     width: 500px;
     font-size: 38px;
-    transform:translateY(-40%);
+    transform:translateY(-65%);
 }
 .content h1 {
+    width: 80vh;
+    margin-left: 15%;
     font-family: 'Playfair Display',serif;
+    font-size:1.5em;
+    font-weight: 400;
+    color: #ffefde;
+    text-shadow: 2px 2px 2px rgba(104, 105, 85, 0.5);
+    text-align: left;
+}
+
+.products-title{
+    text-align: center;
+    font-size: 2em;
+    font-weight: 550;
+    margin: 15vh 5% 0 5%;
 }
 
 .div__products {
-    margin:20px;
+    padding-top: 50px;
+    border-top: 2px solid #dadada;
+    border-radius: 10px;
     display: grid;
     grid-template-columns:repeat(3, 1fr);
     justify-items: center;
     gap:3vw;
-    padding: 4%;
     row-gap: 4vw;
+    margin:5vh 5% 10% 5%;
 }
+
 .product {
     width: 90%;
-    border-radius: 8px;
-    /* border: 1px solid #436CA4; */
+    height: 450px;
+    border-radius: 20px;
     box-sizing: border-box;
-    background-color:#3a4d54f5;
+    background-color:#3a4d5467;
+    padding: 10px 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    a{
+        background-color: #3a4d54;
+    }
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.503);
 }
 .product:hover {
-    border: 1px solid #436CA4;
+    /* border: 1px solid #436CA4; */
+    background-color: #3a4d548a;
+    transition: transform 0.2s;
+    transform:translateY(-3px);
+    .buy{
+        background-color: #374549;
+    }
 }
 .product img {
-    border-radius: 8px;
-    width: 100%;
+    margin: auto;
+    border-radius: 12.5px;
+    width: 95%;
     height: 200px;
+    object-fit: cover;
 }
 .product h3 {
-    font-size:2vw;
+    margin-top: 15px;
+    font-size:1.3em;
+    font-weight: 500;
     color: #dadada;
 }
 .product p {
     float:right;
-    /* color: #07120E; */
-    font-size:1.8vw;
+    font-size:1.4em;
+    font-weight: 500;
+    color: #ffe4c7;
+    margin-top: 23%;
 }
 .buy {
-    
+    margin-top: 5%;
+    margin-bottom: 15px;
+    align-self: center;
+    width: 22.5vh;
+    padding: 10px 15px;
+    border-radius: 10px;
     white-space: nowrap;
-    font-size:2.2vw;
-    font-weight: bold;
+    font-size:3vh;
+    font-weight: 500;
     text-decoration: none;
     color:#dadada;
 }
@@ -221,8 +130,10 @@ nav {
 
 /* review */
 .review {
+    margin: 7.5%;
+    margin-top: 30vh;
+    margin-bottom: 35vh;
     column-count: 2;
-    padding: 50px;
 }
 .review a {
     flex-shrink: 0;
@@ -231,14 +142,14 @@ nav {
     width:70%;
     height:auto;
     display: block;
-    margin-left: auto;
     margin-right: auto;
+    border-radius: 7.5%;
 }
 .review h2 {
     font-size: 4vw;
-    /* color:#07120E; */
     padding: 10px;
     text-align: center;
+    margin-bottom: 6vh;
 }
 .review h2:hover {
     transform: skew(25deg);
@@ -247,12 +158,12 @@ nav {
     -webkit-text-fill-color: transparent;
 }
 .review p {
-    /* color:#07120E; */
-    font-size: 2.5vw;
+    color: #ffefde;
+    font-size: 2vw;
+    font-weight: 200;
+    line-height: 1.5;
 }
-/* .review div{
-    
-} */
+
 footer {
     background-color: #07120E; /* Màu nền tối */
     color: #dadada;
@@ -306,14 +217,16 @@ footer {
 }
 
 .social-icons a {
+    text-decoration: none;
     font-size: 20px;
     color: #dadada;
     margin-right: 15px;
     transition: 0.3s;
 }
 
-.social-icons a:hover {
-    color: #B0B0B0;
+.social-icons a>img:hover {
+    transform: scale(1.1);
+    transition: 0.1s;
 }
 
 /* Responsive */
@@ -352,7 +265,6 @@ footer {
     }
     .product p {
         float:right;
-        /* color: #07120E; */
         font-size:2vw;
     }
     .buy {
@@ -385,7 +297,6 @@ footer {
     }
     .product p {
         float:right;
-        /* color: #07120E; */
         font-size:2.2vw;
     }
     .buy {
@@ -416,13 +327,42 @@ footer {
     }
 }
 .tour-info {
+    margin-left: 20vh;
     text-align: center;
-    background: rgba(255, 255, 255, 0.425);
-    padding: 20px;
-    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+    background-color: rgba(180, 180, 180, 0.15);
+    padding: 20px 10px;
+    border-radius: 20% 20% 60% 60%;
     transform: translate(200%,53%);
     color:#010a17;
+    animation: bounce 1s infinite;
+
+    a{
+        font-size: large;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    a:hover{
+        color: #354a61;
+    }
 }
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(200%, 55%);
+    }
+    40% {
+        transform: translate(200%, 50%);
+    }
+}
+
+.tour-info:hover{
+    animation: none;
+    transform: translate(200%,50%);
+    transition: transform 0.2s;
+}
+
 .circle-img {
     display: block;
     margin-left: auto;
@@ -431,5 +371,5 @@ footer {
     height: 100px;
     background: url("/Img/Phu_Quoc/tour-cano-dao-phu-quoc-rooty-trip-14-01-1024x683.jpg") no-repeat center center/cover;
     border-radius: 50%;
-    margin: 0 auto 10px10px;
+    margin: 0 auto;
 }

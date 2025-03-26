@@ -48,12 +48,12 @@ function checkLoginStatus() {
     if (user) {
       authLinks.innerHTML = `
                 <span>Xin chào, ${user.fullname}!</span>
-                <button onclick="logout()">Đăng xuất</button>
+                <button id="button-logout" onclick="logout()">Đăng xuất</button>
             `;
     } else {
       authLinks.innerHTML = `
-                <a href="/login.html">Đăng Nhập</a>
-                <a href="/register.html">Đăng Ký</a>
+                <a href="/login.html" id="font-main--log-in">Đăng Nhập</a>
+                <a href="/register.html" id="font-main--sign-up">Đăng Ký</a>
             `;
     }
   }

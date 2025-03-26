@@ -5,19 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="Icon/favicon.ico" type="image/x-icon">
     <title>Mục Yêu Thích</title>
+    <link rel="stylesheet" href="/header-footer.css">
     <link rel="stylesheet" href="/favorites.css">
 </head>
 <body>
     <header>
-    <nav>
-        <div class="logo">Four<span>Travel</span><img id="fourtravel" src="/img/logo.png"> </div>
-        <ul class="menu">
-            <li><a href="/trangchu.html">Trang chủ</a></li>
-            <li><a href="/favorites.html">Yêu Thích</a></li>           
-            <li id="auth-links"></li>
-            
-        </ul>
-    </nav>
+        <nav>
+            <div onclick="window.location.href='/trangchu.html'" class="logo">
+                Four<span>Travel</span>
+                <img id="fourtravel" src="/Img/logo.png" style="cursor: pointer;"> <!-- Từ file `trangchu.html` -->
+                <!-- <img id="fourtravel" src="/Img/trangchu/logo.png" style="cursor: pointer;"> --> <!-- Từ file `trangchu (1).html` -->
+            </div>
+            <ul class="menu">
+                <!-- <li><a id="current" href="/trangchu.html">Trang chủ</a></li> Từ file `trangchu.html` -->
+                <li><a href="/trangchu.html">Trang chủ</a></li> <!-- Từ file `trangchu (1).html` -->
+                <li><a href="/favorites.html">Yêu thích</a></li>
+                <li id="auth-links"></li>
+            </ul>
+
+            <div class="dropdown">
+                <button class="dropdown-menu">☰</button>
+                <ul class="dropdown-content">
+                    <li><a href="/trangchu.html">Trang chủ</a></li>
+                    <li><a href="/favorites.html">Yêu thích</a></li>
+                    <li id="auth-links"></li>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            function searchFunction() {
+                let query = document.getElementById("searchInput").value;
+                alert("You searched for: " + query);
+            }
+        </script>
     </header>
     <h1>Danh sách Yêu thích</h1>
     
@@ -36,9 +56,64 @@
         <tbody id="favoriteItems">
 
         </tbody>
+        <tfoot>
+            <tr>
+                <td class="button" colspan="7" onclick="clearFavorites()">Xóa Tất Cả</td>
+            </tr>
+        </tfoot>
+        <!-- <button onclick="clearFavorites()">Xóa Tất Cả</button> -->
     </table>
-    <button onclick="clearFavorites()">Xóa Tất Cả</button>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section logo-section">
+                <h2><i class="fas fa-gem"></i> FOUR TRAVEL</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec diam vel nulla tincidunt sagittis.</p>
+            </div>
     
+            <div class="footer-section">
+                <h3>Đội nhóm</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Điểm đến</h3>
+                <ul>
+                    <li><a href="#">Cần Thơ </a></li>
+                    <li><a href="#">Asia</a></li>
+                    <li><a href="#">Europe</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">South America</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Hỗ trợ</h3>
+                <ul>
+                    <li><a href="#">Trước khi đặt lịch</a></li>
+                    <li><a href="#">Trước chuyến đi</a></li>
+                    <li><a href="#">Trong chuyến đi</a></li>
+                    <li><a href="#">Vấn đề phát sinh</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section social">
+                <h3>Liên hệ với chúng tôi qua</h3>
+                <div class="social-icons">
+                    <!-- <a href="#"><i class="fab fa-instagram"></i><img src="/Img/ig.png"> </a> Từ file `trangchu.html` -->
+                    <a href="#"><i class="fab fa-instagram"></i><img src="/Img/trangchu/instagram.png"> </a> <!-- Từ file `trangchu (1).html` -->
+                    <!-- <a href="#"><i class="fab fa-twitter"></i><img src="/Img/tw.png"> </a> Từ file `trangchu.html` -->
+                    <a href="#"><i class="fab fa-twitter"></i><img src="/Img/trangchu/Twitter.png"> </a> <!-- Từ file `trangchu (1).html` -->
+                    <!-- <a href="#"><i class="fab fa-facebook"></i><img src="/Img/fb.png"> </a> Từ file `trangchu.html` -->
+                    <a href="#"><i class="fab fa-facebook"></i><img src="/Img/trangchu/facebook.png"> </a> <!-- Từ file `trangchu (1).html` -->
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="/user.js"></script>
     <script src="/favorites.js"></script>
     
