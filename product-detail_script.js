@@ -1069,20 +1069,6 @@ function calculateEachPrice(typeOfPerson){
     }, 700)
 }
 
-// function pre_processAddToFavorite(){
-//     adultQuantity = parseInt(document.getElementById("adults").textContent)
-//     childQuantity = parseInt(document.getElementById("childrens").textContent)
-//     itfantQuantity = parseInt(document.getElementById("infants").textContent)
-//     priceDefault = products[productId].price
-//     let totalPrice = adultQuantity * priceDefault + (childQuantity * priceDefault * 0.5) + (itfantQuantity * priceDefault * 0.3)
-//     js2(productId, adultQuantity, childQuantity, itfantQuantity, totalPrice)
-// }
-
-
-// onload = function(){
-//     calculateEachPrice("adults");
-//     calculateTotalPrice();
-// }
 
 window.onload = function () {
     if(window.innerWidth > 520){
@@ -1107,6 +1093,8 @@ function getProductIdFromURL() {
     return productId;
 }
 
+
+
 function addToFavorite() {
     const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
@@ -1117,13 +1105,15 @@ function addToFavorite() {
     }
     let tourId = getProductIdFromURL();
     
+    
     if (!tourId) {
         alert("Không tìm thấy tour!");
         return;
     }
 
     const tour = products.find(product => product.pId === tourId);
-
+    
+    
     if (!tour) {
         alert("Không tìm thấy thông tin tour!");
         return;
@@ -1138,6 +1128,8 @@ function addToFavorite() {
     const existingIndex = favorites.findIndex(fav => fav.pId === tourId);
     if (existingIndex === -1) {
         favorites.push({ pId: tourId, name: tour.name, price, adults, children, infants, totalPrice,image});
+        
+        
         alert("Đã thêm vào mục yêu thích!");
     } else {
         favorites[existingIndex].adults = adults;
@@ -1151,12 +1143,59 @@ function addToFavorite() {
     localStorage.setItem("favoriteTours", JSON.stringify(favorites));
 }
 
-function pre_processBookTour(){
+function bookNow() {
+    let isConfirmed = confirm("Bạn có chắc chắn muốn đặt tour này không?");
+    if (!isConfirmed) return;
+
     const currentUser = JSON.parse(localStorage.getItem("currentUser"));
     if (!currentUser) {
         alert("Bạn chưa đăng nhập! Vui lòng đăng nhập để đặt tour.");
-        window.location.href = "/login.html"; 
+        window.location.href = "/login.html";
         return;
     }
-    bookTour(productId, "product-detail");
+
+    let tourId = getProductIdFromURL();
+    if (!tourId) {
+        alert("Không tìm thấy tour!");
+        return;
+    }
+
+    const tour = products.find(product => product.pId === tourId);
+    if (!tour) {
+        alert("Không tìm thấy thông tin tour!");
+        return;
+    }
+  
+    const adults = parseInt(document.getElementById("adults").textContent) || 0; 
+    const children = parseInt(document.getElementById("childrens").textContent) || 0; 
+    const infants = parseInt(document.getElementById("infants").textContent) || 0; 
+
+    if (adults === 0 && children === 0 && infants === 0) {
+        alert("Vui lòng chọn ít nhất 1 khách để đặt tour!");
+        return;
+    }
+
+    const price = tour.price;
+    const totalPrice = adults * price + (children * price * 0.5) + (infants * price * 0.3);
+
+
+    let favorites = JSON.parse(localStorage.getItem("favoriteTours")) || [];
+    const existingIndex = favorites.findIndex(fav => fav.pId === tourId);
+    
+    if (existingIndex === -1) {
+        favorites.push({ pId: tourId, name: tour.name, price, adults, children, infants, totalPrice });
+        localStorage.setItem("favoriteTours", JSON.stringify(favorites));
+    }
+
+ 
+    let bookingInfo = {
+        tour: { pId: tourId, name: tour.name, price, adults, children, infants, totalPrice },
+        user: currentUser
+    };
+    localStorage.setItem("bookingInfo", JSON.stringify(bookingInfo));
+
+   
+    window.location.href = "reply-customer.html";
 }
+
+document.getElementById("button__advise").addEventListener("click", bookNow);

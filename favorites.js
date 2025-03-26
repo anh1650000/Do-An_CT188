@@ -69,34 +69,9 @@ function bookTour(id) {
         alert("Tour không tồn tại!");
         return;
     }
-    let loggedInUser = JSON.parse(localStorage.getItem("currentUser"));
-    if (!loggedInUser) {
-        alert("Bạn cần đăng nhập để đặt lịch!");
-        return;
-    }
 
-    let bookingInfo = {
-        tour: selectedTour,
-        user: loggedInUser
-    };
-
-    localStorage.setItem("bookingInfo", JSON.stringify(bookingInfo));
-
-    window.location.href = "reply-customer.html";
-}
-
-// ở trên code cũ khong có sửa. ở dưới 
-//mới sửa thử nhma khong chay duoc :< :(
-function bookTour(id, beforePage="favorites") {
-    let isConfirmed = confirm("Bạn có chắc chắn muốn đặt tour này không?");
-    if (!isConfirmed) return;
-
-    let favoriteTours = JSON.parse(localStorage.getItem("favoriteTours")) || [];
-    let selectedTour = (favoriteTours.find(tour => tour.pId === id) === null) ? (beforePage === "product-detail" ? id : null) : null;
-
-    console.log(selectedTour);
-    if (!selectedTour && beforePage === "favorites") {
-        alert("Tour không tồn tại!");
+    if (selectedTour.adults === 0 && selectedTour.children === 0 && selectedTour.infants === 0) {
+        alert("Vui lòng chọn ít nhất 1 khách để đặt tour!");
         return;
     }
     
@@ -115,3 +90,34 @@ function bookTour(id, beforePage="favorites") {
 
     window.location.href = "reply-customer.html";
 }
+
+// ở trên code cũ khong có sửa. ở dưới 
+//mới sửa thử nhma khong chay duoc :< :(
+// function bookTour(id, beforePage="favorites") {
+//     let isConfirmed = confirm("Bạn có chắc chắn muốn đặt tour này không?");
+//     if (!isConfirmed) return;
+
+//     let favoriteTours = JSON.parse(localStorage.getItem("favoriteTours")) || [];
+//     let selectedTour = (favoriteTours.find(tour => tour.pId === id) === null) ? (beforePage === "product-detail" ? id : null) : null;
+
+//     console.log(selectedTour);
+//     if (!selectedTour && beforePage === "favorites") {
+//         alert("Tour không tồn tại!");
+//         return;
+//     }
+    
+//     let loggedInUser = JSON.parse(localStorage.getItem("currentUser"));
+//     if (!loggedInUser) {
+//         alert("Bạn cần đăng nhập để đặt lịch!");
+//         return;
+//     }
+
+//     let bookingInfo = {
+//         tour: selectedTour,
+//         user: loggedInUser
+//     };
+
+//     localStorage.setItem("bookingInfo", JSON.stringify(bookingInfo));
+
+//     window.location.href = "reply-customer.html";
+// }
