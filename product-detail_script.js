@@ -113,9 +113,9 @@ const products = [
         "time": 3,
         "price": 3290000,
         images: [
+            "https://lh3.googleusercontent.com/p/AF1QipMJAbZ878FjgBV40YgW_JyIdfw74QOzybpwQ7cO=s1360-w1360-h1020",
             "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcRjBnkbSgKGepIHIbAFX64fWUr79DJsLV7ZJtgliYM7iRlXNsVcPc7N4xj-5SWe_smiCsylEne4-QyQO3oZOuny22WuLmlW77Lk27czyA",
             "https://lh5.googleusercontent.com/p/AF1QipPNxGVu_u5lqumVxuAlkkDPg_45OVOUJsT_kYTF=w743-h429-n-k-no",
-            "https://lh3.googleusercontent.com/p/AF1QipMJAbZ878FjgBV40YgW_JyIdfw74QOzybpwQ7cO=s1360-w1360-h1020",
             "https://lh3.googleusercontent.com/p/AF1QipODxTc95IqOWLBo81tmKO4hqamJGwcTrmVYvexj=s1360-w1360-h1020",
             "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRo3JLFG-aA3uWow0vSprB7h6dzm7SZoupyKQGIzHA53HI8cjOQpCHfvisAS3AgY_VPhQ89nUL1ajlXAoxwq_QqF_JPrgv5Wz9W6DPNCg",
             "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQ_q_Hi4PyTkyBE0Uv5WpD0kFd9ZJmNALc6412A5Pz4m4dsq5WuHqpcQ5iWgXxxp4PM2Rw7DsQDrBxpXhWONO0tcYKD1DpWdJbPMCjr6w"
@@ -176,13 +176,13 @@ const products = [
         "time": 3,
         "price": 2690000,
         images: [
+            "/Img/Da_Lat/thung_lung_tinh_yeu2.jpg",
             "/Img/Da_Lat/cau_kinh.jpg",
             "/Img/Da_Lat/dapahill.jpg",
             "/Img/Da_Lat/domain_de_marie.jpg",
             "/Img/Da_Lat/ho-da-thien.jpg",
             "/Img/Da_Lat/thac_bobla.png",
-            "/Img/Da_Lat/thung_lung_tinh_yeu.jpg",
-            "/Img/Da_Lat/thung_lung_tinh_yeu2.jpg"
+            "/Img/Da_Lat/thung_lung_tinh_yeu.jpg"
         ],
         moreInformation: {
             "tourist attractions": "Đà Lạt, Thác Bobla, Ga Xe Lửa, Thung Lũng Tình Yêu, Cầu Kính 7D",
@@ -353,8 +353,8 @@ const products = [
         "time": 4,
         "price": 39990000,
         images: [
-            "/Img/Ha_Long/2_IOUD.jpg",
             "/Img/Ha_Long/cat+ba.jpg",
+            "/Img/Ha_Long/2_IOUD.jpg",
             "/Img/Ha_Long/cat-ba.webp",
             "/Img/Ha_Long/Halong-Bay-1119x700.jpg",
             "/Img/Ha_Long/index_1.jpg",
@@ -1124,12 +1124,12 @@ function addToFavorite() {
     const price = tour.price;
     const totalPrice = adults * price + (children * price * 0.5) + (infants * price * 0.3);
     const image = (tour.images && tour.images.length > 0) ? tour.images[0] : "default.jpg";
+
     let favorites = JSON.parse(localStorage.getItem("favoriteTours")) || [];
     const existingIndex = favorites.findIndex(fav => fav.pId === tourId);
+    
     if (existingIndex === -1) {
         favorites.push({ pId: tourId, name: tour.name, price, adults, children, infants, totalPrice,image});
-        
-        
         alert("Đã thêm vào mục yêu thích!");
     } else {
         favorites[existingIndex].adults = adults;

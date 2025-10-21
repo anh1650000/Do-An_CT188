@@ -16,7 +16,7 @@ function renderFavorites() {
     // Sử dụng DocumentFragment để giảm reflow
     let fragment = document.createDocumentFragment();
 
-    favorites.forEach((tour) => {
+    favorites.reverse().forEach((tour) => {
         let row = document.createElement("tr");
         
         row.innerHTML = `

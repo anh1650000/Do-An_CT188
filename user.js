@@ -81,6 +81,7 @@ function logout() {
   alert("Đã đăng xuất!");
   window.location.href = "/login.html";
 }
+
 document.addEventListener("DOMContentLoaded", function () {
   const favoriteLink = document.querySelector("a[href='/favorites.html']");
 
